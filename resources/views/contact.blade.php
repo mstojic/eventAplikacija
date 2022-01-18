@@ -51,12 +51,12 @@
           <nav class="main-nav">
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index">Home</a></li>
-              <li><a href="category">Category</a></li>
-              <li><a href="listing">Events</a></li>
-              <li><a href="contact" class="active">Contact Us</a></li>
+              <li><a href="index" class="active">Naslovnica</a></li>
+              <li><a href="category">Kategorije</a></li>
+              <li><a href="listing">Događaji</a></li>
+              <li><a href="contact">Kontakt</a></li>
               <li>
-                <div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Add Your Event</a></div>
+                <div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Dodajte svoj događaj</a></div>
               </li>
             </ul>
             <a class='menu-trigger'>
@@ -75,8 +75,8 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="top-text header-text">
-            <h6>Keep in touch with us</h6>
-            <h2>Feel free to send us a message!</h2>
+            <h6>Kontaktirajte nas</h6>
+            <h2>Možete nam se javiti putem poruke</h2>
           </div>
         </div>
       </div>
@@ -102,31 +102,31 @@
                   <div class="row">
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                        <input type="name" name="name" id="name" placeholder="Ime" autocomplete="on" required>
                       </fieldset>
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on"
+                        <input type="surname" name="surname" id="surname" placeholder="Prezime" autocomplete="on"
                           required>
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
+                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email"
                           required="">
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Message"
+                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Poruka"
                           required=""></textarea>
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
                         <button type="submit" id="form-submit" class="main-button "><i class="fa fa-paper-plane"></i>
-                          Send Message</button>
+                          Pošaljite Poruku</button>
                       </fieldset>
                     </div>
                   </div>
@@ -147,19 +147,19 @@
             <div class="logo">
               <img src="assets/images/black-logo.png" alt="Plot Listing" width="500" , width="100">
             </div>
-            <p> Best website for searching or publishing Events! </p>
+            <p> Najbolja stranica za oglašavanje vaših događaja! </p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="helpful-links">
-            <h4>Helpful Links</h4>
+            <h4>Tražite nešto?</h4>
             <div class="row">
               <div class="col-lg-6 col-sm-6">
                 <ul>
-                  <li><a href="#">Categories</a></li>
-                  <li><a href="#">Kategory</a></li>
-                  <li><a href="#">Events</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Kategorije</a></li>
+                  <li><a href="#">Dodajte svoj događaj</a></li>
+                  <li><a href="#">Događaji</a></li>
+                  <li><a href="#">Kontaktirajte nas</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -170,7 +170,7 @@
         </div>
         <div class="col-lg-4">
           <div class="contact-us">
-            <h4>Contact Us</h4>
+            <h4>Kontaktirajte nas</h4>
             <p>Mostar, 88000</p>
             <div class="row">
               <div class="col-lg-6">

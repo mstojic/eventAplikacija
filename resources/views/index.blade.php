@@ -53,12 +53,12 @@
           <nav class="main-nav">
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index" class="active">Home</a></li>
-              <li><a href="category">Category</a></li>
-              <li><a href="listing">Events</a></li>
-              <li><a href="contact">Contact Us</a></li>
+              <li><a href="index" class="active">Naslovnica</a></li>
+              <li><a href="category">Kategorije</a></li>
+              <li><a href="listing">Događaji</a></li>
+              <li><a href="contact">Kontakt</a></li>
               <li>
-                <div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Add Your Event</a></div>
+                <div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Dodajte svoj događaj</a></div>
               </li>
             </ul>
             <a class='menu-trigger'>
@@ -77,8 +77,8 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="top-text header-text">
-            <h6>Over 36,500+ Active Events</h6>
-            <h2>Find Nearby Events For You</h2>
+            <h6>DOBRODOŠLI!</h6>
+            <h2>Pronađite događaje u vašoj blizini</h2>
           </div>
         </div>
         <div class="col-lg-12">
@@ -88,16 +88,16 @@
                 <fieldset>
                   <select name="area" class="form-select" aria-label="Area" id="chooseCategory"
                     onchange="this.form.click()">
-                    <option selected>All Areas</option>
+                    <option selected>Sva mjesta</option>
                     <option value="New Village">Mostar</option>
-                    <option value="Old Town">Old Town</option>
+                    <option value="Old Town">Čapljina</option>
                     <option value="Modern City">Neka lokacija</option>
                   </select>
                 </fieldset>
               </div>
               <div class="col-lg-3 align-self-center">
                 <fieldset>
-                  <input type="address" name="address" class="searchText" placeholder="Enter a location"
+                  <input type="address" name="address" class="searchText" placeholder="Upišite lokaciju"
                     autocomplete="on" required>
                 </fieldset>
               </div>
@@ -105,17 +105,17 @@
                 <fieldset>
                   <select name="price" class="form-select" aria-label="Default select example" id="chooseCategory"
                     onchange="this.form.click()">
-                    <option selected>Price Range</option>
+                    <option selected>Cjenovni Rang</option>
                     <option value="$100 - $250">$100 - $250</option>
                     <option value="$250 - $500">$250 - $500</option>
                     <option value="$500 - $1000">$500 - $1,000</option>
-                    <option value="$1000+">$1,000 or more</option>
+                    <option value="$1000+">$1,000 ili više</option>
                   </select>
                 </fieldset>
               </div>
               <div class="col-lg-3">
                 <fieldset>
-                  <button class="main-button"><i class="fa fa-search"></i> Search Now</button>
+                  <button class="main-button"><i class="fa fa-search"></i> Pretraga</button>
                 </fieldset>
               </div>
             </div>
@@ -124,15 +124,15 @@
         <div class="col-lg-10 offset-lg-1">
           <ul class="categories">
             <li><a href="category"><span class="icon"><img src="assets/images/search-icon-01.png"
-                    alt="Home"></span> Concerts</a></li>
+                    alt="Home"></span> Koncerti</a></li>
             <li><a href="listing"><span class="icon"><img src="assets/images/search-icon-02.png" alt="Food"></span>
-                Food &amp; Life</a></li>
+                Hrana &amp; Život</a></li>
             <li><a href="#"><span class="icon"><img src="assets/images/search-icon-03.png" alt="Vehicle"></span>
-                Sports</a></li>
+                Sport</a></li>
             <li><a href="#"><span class="icon"><img src="assets/images/search-icon-04.png" alt="Shopping"></span>
-                Shopping</a></li>
+                Kupovina</a></li>
             <li><a href="#"><span class="icon"><img src="assets/images/search-icon-05.png" alt="Travel"></span>
-                Conferences</a></li>
+                Konferencije</a></li>
           </ul>
         </div>
       </div>
@@ -145,8 +145,8 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="section-heading">
-            <h2>Popular Categories</h2>
-            <h6>Check Them Out</h6>
+            <h2>Popularne Kategorije</h2>
+            <h6></h6>
           </div>
         </div>
         <div class="col-lg-12">
@@ -158,31 +158,31 @@
                     <div class="first-thumb active">
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
-                        Concerts
+                        Koncerti
                       </div>
                     </div>
                     <div>
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-02.png" alt=""></span>
-                        Food &amp; Life
+                        Hrana
                       </div>
                     </div>
                     <div>
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
-                        Sports
+                        Sport
                       </div>
                     </div>
                     <div>
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-04.png" alt=""></span>
-                        Shopping
+                        Kupovina
                       </div>
                     </div>
                     <div class="last-thumb">
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-05.png" alt=""></span>
-                        Conferences
+                        Konferencije
                       </div>
                     </div>
                   </div>
@@ -195,11 +195,9 @@
                           <div class="row">
                             <div class="col-lg-5 align-self-center">
                               <div class="left-text">
-                                <h4>One Of The Most Trending Stuffs Right Now!</h4>
-                                <p>Plot Listing is a responsive Bootstrap 5 website template that included 4 different
-                                  HTML pages. This template is provided by TemplateMo website. You can apply this layout
-                                  for your static or dynamic CMS websites.</p>
-                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Discover More</a>
+                                <h4>Raznovrsni koncerti svuda oko vas!</h4>
+                                <p>Opis kateogrije</p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Saznajte više</a>
                                 </div>
                               </div>
                             </div>
@@ -218,10 +216,9 @@
                           <div class="row">
                             <div class="col-lg-5 align-self-center">
                               <div class="left-text">
-                                <h4>Food and Lifestyle category is here</h4>
-                                <p>You can feel free to download, edit and apply this template for your website. Please
-                                  tell your friends about TemplateMo website.</p>
-                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Explore More</a>
+                                <h4>Restorani u vašoj blizini!</h4>
+                                <p>Opis kategorije</p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Saznajte više</a>
                                 </div>
                               </div>
                             </div>
@@ -240,11 +237,10 @@
                           <div class="row">
                             <div class="col-lg-5 align-self-center">
                               <div class="left-text">
-                                <h4>Best car rentals for your trips!</h4>
-                                <p>Did you know? You can get the best free HTML templates on Too CSS blog. Visit the
-                                  blog pages and explore fresh and latest website templates.</p>
-                                <div class="main-white-button"><a href="listing"><i class="fa fa-eye"></i> More
-                                    Listing</a></div>
+                                <h4>Aktualna sportska događanja!</h4>
+                                <p>Opis kategorije</p>
+                                <div class="main-white-button"><a href="listing"><i class="fa fa-eye"></i> Saznajte više
+                                    </a></div>
                               </div>
                             </div>
                             <div class="col-lg-7 align-self-center">
@@ -262,10 +258,9 @@
                           <div class="row">
                             <div class="col-lg-5 align-self-center">
                               <div class="left-text">
-                                <h4>Shopping List: Images from Unsplash</h4>
-                                <p>Image credits go to Unsplash website that provides free stock photos for anyone.
-                                  Images used in this Plot Listing template are from Unsplash.</p>
-                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Discover More</a>
+                                <h4>Posjetite trgovine u svojoj blizini!</h4>
+                                <p>Opis proizvoda</p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Saznajte više</a>
                                 </div>
                               </div>
                             </div>
@@ -284,12 +279,11 @@
                           <div class="row">
                             <div class="col-lg-5 align-self-center">
                               <div class="left-text">
-                                <h4>Information and Safety Tips for Traveling</h4>
-                                <p>You are allowed to use this template for your commercial websites. You are NOT
-                                  allowed to redistribute this template ZIP file on any Free CSS collection websites.
+                                <h4>Razne konfrencije u vašoj blizini!</h4>
+                                <p>Opis proizvoda
                                 </p>
                                 <div class="main-white-button"><a rel="nofollow"
-                                    href="https://templatemo.com/contact"><i class="fa fa-eye"></i> Read More</a></div>
+                                    href="https://templatemo.com/contact"><i class="fa fa-eye"></i> Saznajte više</a></div>
                               </div>
                             </div>
                             <div class="col-lg-7 align-self-center">
@@ -317,8 +311,8 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="section-heading">
-            <h2>Recent Added Events</h2>
-            <h6>Check Them Out</h6>
+            <h2>Nedavno Dodani Događaji</h2>
+            <h6>Razgledajte ih</h6>
           </div>
         </div>
         <div class="col-lg-12">
@@ -332,28 +326,28 @@
                     </div>
                     <div class="right-content align-self-center">
                       <a href="#">
-                        <h4>1. First Apartment Unit</h4>
+                        <h4>1. Event1</h4>
                       </a>
-                      <h6>by: Sale Agent</h6>
+                      <h6>Organizator: </h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
-                        <li>(18) Reviews</li>
+                        <li>(18) Recenzije</li>
                       </ul>
                       <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 - $950 / month
-                        with taxes
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 - $950
+                        
                       </span>
-                      <span class="details">Details: <em>2760 sq ft</em></span>
+                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Bathrooms</li>
+                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Soba</li>
+                        <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li>
                       </ul>
                       <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                       </div>
                     </div>
                   </div>
@@ -365,28 +359,28 @@
                     </div>
                     <div class="right-content align-self-center">
                       <a href="#">
-                        <h4>2. Another House of Gaming</h4>
+                        <h4>2. Event2</h4>
                       </a>
-                      <h6>by: Top Sale Agent</h6>
+                      <h6>Organizator: </h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
-                        <li>(24) Reviews</li>
+                        <li>(24) Recenzije</li>
                       </ul>
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,400 - $3,500 /
-                        month with taxes
+                        month 
                       </span>
-                      <span class="details">Details: <em>3650 sq ft</em></span>
+                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</li>
+                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Soba</li>
+                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Kupatila</li>
                       </ul>
                       <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                       </div>
                     </div>
                   </div>
@@ -398,28 +392,28 @@
                     </div>
                     <div class="right-content align-self-center">
                       <a href="#">
-                        <h4>3. Secret Place Hidden House</h4>
+                        <h4>3. Event3</h4>
                       </a>
-                      <h6>by: Best Property</h6>
+                      <h6>Organizator: </h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
-                        <li>(36) Reviews</li>
+                        <li>(36) Recenzije</li>
                       </ul>
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,500 - $3,600 /
-                        month with taxes
+                        month 
                       </span>
-                      <span class="details">Details: <em>5500 sq ft</em></span>
+                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</li>
+                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Soba</li>
+                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Kupatila</li>
                       </ul>
                       <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                       </div>
                     </div>
                   </div>
@@ -435,28 +429,28 @@
                     </div>
                     <div class="right-content align-self-center">
                       <a href="#">
-                        <h4>4. Sunshine Fourth Apartment</h4>
+                        <h4>4. Event4</h4>
                       </a>
-                      <h6>by: Sale Agent</h6>
+                      <h6>Organizator: </h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
-                        <li>(24) Reviews</li>
+                        <li>(24) Recenzije</li>
                       </ul>
                       <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,600 / month with
-                        taxes
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,600
+                        
                       </span>
-                      <span class="details">Details: <em>3660 sq ft</em></span>
+                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 5 Bedrooms</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</li>
+                        <li><img src="assets/images/listing-icon-02.png" alt=""> 5 Soba</li>
+                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Kupatila</li>
                       </ul>
                       <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                       </div>
                     </div>
                   </div>
@@ -468,28 +462,28 @@
                     </div>
                     <div class="right-content align-self-center">
                       <a href="#">
-                        <h4>5. Best House Of the Town</h4>
+                        <h4>5. Event5</h4>
                       </a>
-                      <h6>by: Sale Agent</h6>
+                      <h6>Organizator: </h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
-                        <li>(32) Reviews</li>
+                        <li>(32) Recenzije</li>
                       </ul>
                       <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,600 / month with
-                        taxes
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,600
+                        
                       </span>
-                      <span class="details">Details: <em>1750 sq ft</em></span>
+                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 6 Bedrooms</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</li>
+                        <li><img src="assets/images/listing-icon-02.png" alt=""> 6 Soba</li>
+                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Kupatila</li>
                       </ul>
                       <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                       </div>
                     </div>
                   </div>
@@ -501,28 +495,28 @@
                     </div>
                     <div class="right-content align-self-center">
                       <a href="#">
-                        <h4>6. Amazing Pool Party Villa</h4>
+                        <h4>6. Event6</h4>
                       </a>
-                      <h6>by: Sale Agent</h6>
+                      <h6>Organizator: </h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
-                        <li>(40) Reviews</li>
+                        <li>(40) Recenzije</li>
                       </ul>
                       <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,850 / month with
-                        taxes
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,850
+                        
                       </span>
-                      <span class="details">Details: <em>3660 sq ft</em></span>
+                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Bedrooms</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</li>
+                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Soba</li>
+                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Kupatila</li>
                       </ul>
                       <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                       </div>
                     </div>
                   </div>
@@ -538,28 +532,28 @@
                     </div>
                     <div class="right-content align-self-center">
                       <a href="#">
-                        <h4>7. Sunny Apartment</h4>
+                        <h4>7. Event7</h4>
                       </a>
-                      <h6>by: Sale Agent</h6>
+                      <h6>Organizator: </h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
-                        <li>(24) Reviews</li>
+                        <li>(24) Recenzije</li>
                       </ul>
                       <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,450 / month with
-                        taxes
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,450
+                        
                       </span>
-                      <span class="details">Details: <em>1640 sq ft</em></span>
+                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 8 Bedrooms</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 5 Bathrooms</li>
+                        <li><img src="assets/images/listing-icon-02.png" alt=""> 8 Soba</li>
+                        <li><img src="assets/images/listing-icon-03.png" alt=""> 5 Kupatila</li>
                       </ul>
                       <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                       </div>
                     </div>
                   </div>
@@ -571,28 +565,28 @@
                     </div>
                     <div class="right-content align-self-center">
                       <a href="#">
-                        <h4>8. Third House of Gaming</h4>
+                        <h4>8. Event8</h4>
                       </a>
-                      <h6>by: Sale Agent</h6>
+                      <h6>Organizator: </h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
-                        <li>(15) Reviews</li>
+                        <li>(15) Recenzije</li>
                       </ul>
                       <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,520 / month with
-                        taxes
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,520
+                        
                       </span>
-                      <span class="details">Details: <em>1660 sq ft</em></span>
+                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 5 Bedrooms</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Bathrooms</li>
+                        <li><img src="assets/images/listing-icon-02.png" alt=""> 5 Soba</li>
+                        <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li>
                       </ul>
                       <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                       </div>
                     </div>
                   </div>
@@ -604,28 +598,28 @@
                     </div>
                     <div class="right-content align-self-center">
                       <a href="#">
-                        <h4>9. Relaxing BBQ Party Villa</h4>
+                        <h4>9. Event9</h4>
                       </a>
-                      <h6>by: Sale Agent</h6>
+                      <h6>Organizator: </h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
-                        <li>(20) Reviews</li>
+                        <li>(20) Recenzije</li>
                       </ul>
                       <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $4,760 / month with
-                        taxes
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $4,760
+                        
                       </span>
-                      <span class="details">Details: <em>2880 sq ft</em></span>
+                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 6 Bedrooms</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Bathrooms</li>
+                        <li><img src="assets/images/listing-icon-02.png" alt=""> 6 Soba</li>
+                        <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li>
                       </ul>
                       <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                       </div>
                     </div>
                   </div>
@@ -647,19 +641,19 @@
             <div class="logo">
               <img src="assets/images/black-logo.png" alt="Plot Listing" width="500" , width="100">
             </div>
-            <p> Best website for searching or publishing Events! </p>
+            <p> Najbolja stranica za oglašavanje vaših događaja! </p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="helpful-links">
-            <h4>Helpful Links</h4>
+            <h4>Tražite nešto?</h4>
             <div class="row">
               <div class="col-lg-6 col-sm-6">
                 <ul>
-                  <li><a href="#">Categories</a></li>
-                  <li><a href="#">Kategory</a></li>
-                  <li><a href="#">Events</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Kategorije</a></li>
+                  <li><a href="#">Dodajte svoj događaj</a></li>
+                  <li><a href="#">Događaji</a></li>
+                  <li><a href="#">Kontaktirajte nas</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -670,7 +664,7 @@
         </div>
         <div class="col-lg-4">
           <div class="contact-us">
-            <h4>Contact Us</h4>
+            <h4>Kontaktirajte nas</h4>
             <p>Mostar, 88000</p>
             <div class="row">
               <div class="col-lg-6">

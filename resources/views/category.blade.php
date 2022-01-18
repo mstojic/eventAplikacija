@@ -47,12 +47,12 @@
           <nav class="main-nav">
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index">Home</a></li>
-              <li><a href="category" class="active">Category</a></li>
-              <li><a href="listing">Events</a></li>
-              <li><a href="contact">Contact Us</a></li>
+              <li><a href="index" class="active">Naslovnica</a></li>
+              <li><a href="category">Kategorije</a></li>
+              <li><a href="listing">Događaji</a></li>
+              <li><a href="contact">Kontakt</a></li>
               <li>
-                <div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Add Your Event</a></div>
+                <div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Dodajte svoj događaj</a></div>
               </li>
             </ul>
             <a class='menu-trigger'>
@@ -70,8 +70,8 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="top-text header-text">
-            <h6>Categories with Simple Tabs</h6>
-            <h2>We have a wide range of business categories for you</h2>
+            <h6>Kategorije događaja</h6>
+            <h2>Događaji različitih kategorija</h2>
           </div>
         </div>
       </div>
@@ -92,35 +92,35 @@
                     <div class="first-thumb active">
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-01.png" alt="">
-                          <h4>Apartments</h4>
+                          <h4>Stanovi</h4>
                         </span>
                       </div>
                     </div>
                     <div>
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-02.png" alt="">
-                          <h4>Food &amp; Life</h4>
+                          <h4>Hrana i Piće</h4>
                         </span>
                       </div>
                     </div>
                     <div>
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-03.png" alt="">
-                          <h4>Cars</h4>
+                          <h4>Sport</h4>
                         </span>
                       </div>
                     </div>
                     <div>
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-04.png" alt="">
-                          <h4>Shopping</h4>
+                          <h4>Kupovina</h4>
                         </span>
                       </div>
                     </div>
                     <div class="last-thumb">
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-05.png" alt="">
-                          <h4>Traveling</h4>
+                          <h4>Konferencije</h4>
                         </span>
                       </div>
                     </div>
@@ -138,13 +138,13 @@
                                   <div class="col-lg-6">
                                     <div class="top-icon">
                                       <span class="icon"><img src="assets/images/search-icon-01.png" alt="">
-                                        <h4>Apartments</h4>
+                                        <h4>Stanovi</h4>
                                       </span>
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
                                     <div class="main-white-button">
-                                      <a href="#"><i class="fa fa-plus"></i> Check Our Listings</a>
+                                      <a href="#"><i class="fa fa-plus"></i> Pregledajte Događaje</a>
                                     </div>
                                   </div>
                                 </div>
@@ -154,19 +154,18 @@
                               <div class="description">
                                 <div class="row">
                                   <div class="col-lg-9">
-                                    <h4>Description for Apartments</h4>
-                                    <p>If you feel that Plot Listing HTML template is useful, please <a rel="nofollow"
-                                        href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little
-                                      via PayPal. You are allowed to use this template for your commercial websites. You
-                                      are NOT allowed to redistribute this template ZIP file on any Free CSS collection
-                                      websites. You may contact us for more information. Thank you.</p>
+                                    <h4>Opis Kategorije Stanovi</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
+                                      incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                      gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                      accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
-                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
+                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Ukupno Oglasa</h4>
                                     </div>
-                                    <span class="list-item">This Week: 200 Listings &amp; 150 Sales<br>This Month: 1,800
-                                      Listings &amp; 1,560 Sales<br>This Year: 16,000 Listings &amp; 14,000 Sales</span>
+                                    <span class="list-item">Ovaj Tjedan: 200 Oglasa &amp; 150 Prodaja<br>Ovaj Mjesec: 1,800
+                                      Oglasa &amp; 1,560 Prodaja<br>Ove Godine: 16,000 Oglasa &amp; 14,000 Prodaja</span>
                                   </div>
                                 </div>
                               </div>
@@ -175,7 +174,7 @@
                               <div class="general-info">
                                 <div class="row">
                                   <div class="col-lg-12">
-                                    <h4>General Info. about Apartments</h4>
+                                    <h4>Osnovne Informacije o Kategoriji Stanovi</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
                                       incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                                       gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -203,13 +202,13 @@
                                   <div class="col-lg-6">
                                     <div class="top-icon">
                                       <span class="icon"><img src="assets/images/search-icon-02.png" alt="">
-                                        <h4>Food &amp; Life</h4>
+                                        <h4>Hrana i Piće</h4>
                                       </span>
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
                                     <div class="main-white-button">
-                                      <a href="#"><i class="fa fa-plus"></i> Check Our Listings</a>
+                                      <a href="#"><i class="fa fa-plus"></i> Pregledajte Događaje</a>
                                     </div>
                                   </div>
                                 </div>
@@ -219,10 +218,11 @@
                               <div class="description">
                                 <div class="row">
                                   <div class="col-lg-9">
-                                    <h4>Description for Food and Life</h4>
-                                    <p>Plot Listing template is a responsive website layout that included four HTML
-                                      pages. Please tell your friends about TemplateMo website. You can download and
-                                      apply this template for your dynamic CMS websites.</p>
+                                    <h4>Opis Kategorije Food and Life</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
+                                      incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                      gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                      accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
                                     <br>
                                     <p><strong>Did you know?</strong>
                                       <br>You can get the best free HTML templates on Too CSS blog. Visit the blog pages
@@ -231,10 +231,10 @@
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
-                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
+                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Ukupno Oglasa</h4>
                                     </div>
-                                    <span class="list-item">This Week: 124 Listings &amp; 84 Sales<br>This Month: 1,040
-                                      Listings &amp; 720 Sales<br>This Year: 10,640 Listings &amp; 9,600 Sales</span>
+                                    <span class="list-item">Ovaj Tjedan: 124 Oglasa &amp; 84 Prodaja<br>Ovaj Mjesec: 1,040
+                                      Oglasa &amp; 720 Prodaja<br>Ove Godine: 10,640 Oglasa &amp; 9,600 Prodaja</span>
                                   </div>
                                 </div>
                               </div>
@@ -271,13 +271,13 @@
                                   <div class="col-lg-6">
                                     <div class="top-icon">
                                       <span class="icon"><img src="assets/images/search-icon-03.png" alt="">
-                                        <h4>Cars</h4>
+                                        <h4>Sport</h4>
                                       </span>
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
                                     <div class="main-white-button">
-                                      <a href="#"><i class="fa fa-plus"></i> Check Our Listings</a>
+                                      <a href="#"><i class="fa fa-plus"></i> Pregledajte Događaje</a>
                                     </div>
                                   </div>
                                 </div>
@@ -287,7 +287,7 @@
                               <div class="description">
                                 <div class="row">
                                   <div class="col-lg-9">
-                                    <h4>Description about cars</h4>
+                                    <h4>Opis Kategorije Sport</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
                                       incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                                       gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -295,10 +295,10 @@
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
-                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
+                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Ukupno Oglasa</h4>
                                     </div>
-                                    <span class="list-item">This Week: 800 Listings &amp; 400 Sales<br>This Month: 1,600
-                                      Listings &amp; 1,200 Sales<br>This Year: 14,000 Listings &amp; 12,000 Sales</span>
+                                    <span class="list-item">Ovaj Tjedan: 800 Oglasa &amp; 400 Prodaja<br>Ovaj Mjesec: 1,600
+                                      Oglasa &amp; 1,200 Prodaja<br>Ove Godine: 14,000 Oglasa &amp; 12,000 Prodaja</span>
                                   </div>
                                 </div>
                               </div>
@@ -307,7 +307,7 @@
                               <div class="general-info">
                                 <div class="row">
                                   <div class="col-lg-12">
-                                    <h4>General Info. about cars</h4>
+                                    <h4>Osnovne Informacije o Kategoriji cars</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
                                       incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                                       gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -335,13 +335,13 @@
                                   <div class="col-lg-6">
                                     <div class="top-icon">
                                       <span class="icon"><img src="assets/images/search-icon-04.png" alt="">
-                                        <h4>Shopping</h4>
+                                        <h4>Kupovina</h4>
                                       </span>
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
                                     <div class="main-white-button">
-                                      <a href="#"><i class="fa fa-plus"></i> Check Our Listings</a>
+                                      <a href="#"><i class="fa fa-plus"></i> Pregledajte Događaje</a>
                                     </div>
                                   </div>
                                 </div>
@@ -351,7 +351,7 @@
                               <div class="description">
                                 <div class="row">
                                   <div class="col-lg-9">
-                                    <h4>Description about Shopping</h4>
+                                    <h4>Description about Kupovina</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
                                       incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                                       gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -359,10 +359,10 @@
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
-                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
+                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Ukupno Oglasa</h4>
                                     </div>
-                                    <span class="list-item">This Week: 150 Listings &amp; 140 Sales<br>This Month: 1,500
-                                      Listings &amp; 1,100 Sales<br>This Year: 15,000 Listings &amp; 14,000 Sales</span>
+                                    <span class="list-item">Ovaj Tjedan: 150 Oglasa &amp; 140 Prodaja<br>Ovaj Mjesec: 1,500
+                                      Oglasa &amp; 1,100 Prodaja<br>Ove Godine: 15,000 Oglasa &amp; 14,000 Prodaja</span>
                                   </div>
                                 </div>
                               </div>
@@ -371,7 +371,7 @@
                               <div class="general-info">
                                 <div class="row">
                                   <div class="col-lg-12">
-                                    <h4>General Info. for Shopping</h4>
+                                    <h4>General Info. for Kupovina</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
                                       incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                                       gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -399,13 +399,13 @@
                                   <div class="col-lg-6">
                                     <div class="top-icon">
                                       <span class="icon"><img src="assets/images/search-icon-05.png" alt="">
-                                        <h4>Traveling</h4>
+                                        <h4>Konferencije</h4>
                                       </span>
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
                                     <div class="main-white-button">
-                                      <a href="#"><i class="fa fa-plus"></i> Check Our Listings</a>
+                                      <a href="#"><i class="fa fa-plus"></i> Pregledajte Događaje</a>
                                     </div>
                                   </div>
                                 </div>
@@ -415,7 +415,7 @@
                               <div class="description">
                                 <div class="row">
                                   <div class="col-lg-9">
-                                    <h4>Description of Traveling</h4>
+                                    <h4>Opis Kategorije  Konferencije</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
                                       incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                                       gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -423,10 +423,10 @@
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
-                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
+                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Ukupno Oglasa</h4>
                                     </div>
-                                    <span class="list-item">This Week: 200 Listings &amp; 120 Sales<br>This Month: 1,400
-                                      Listings &amp; 900 Sales<br>This Year: 14,000 Listings &amp; 12,000 Sales</span>
+                                    <span class="list-item">Ovaj Tjedan: 200 Oglasa &amp; 120 Prodaja<br>Ovaj Mjesec: 1,400
+                                      Oglasa &amp; 900 Prodaja<br>Ove Godine: 14,000 Oglasa &amp; 12,000 Prodaja</span>
                                   </div>
                                 </div>
                               </div>
@@ -435,7 +435,7 @@
                               <div class="general-info">
                                 <div class="row">
                                   <div class="col-lg-12">
-                                    <h4>General Info. about Traveling</h4>
+                                    <h4>Osnovne Informacije o Kategoriji Konferencije</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ak
                                       incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
                                       gravidat doerski. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -471,19 +471,19 @@
             <div class="logo">
               <img src="assets/images/black-logo.png" alt="Plot Listing" width="500" , width="100">
             </div>
-            <p> Best website for searching or publishing Events! </p>
+            <p> Najbolja stranica za oglašavanje vaših događaja! </p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="helpful-links">
-            <h4>Helpful Links</h4>
+            <h4>Tražite nešto?</h4>
             <div class="row">
               <div class="col-lg-6 col-sm-6">
                 <ul>
-                  <li><a href="#">Categories</a></li>
-                  <li><a href="#">Kategory</a></li>
-                  <li><a href="#">Events</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Kategorije</a></li>
+                  <li><a href="#">Dodajte svoj događaj</a></li>
+                  <li><a href="#">Događaji</a></li>
+                  <li><a href="#">Kontaktirajte nas</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -494,7 +494,7 @@
         </div>
         <div class="col-lg-4">
           <div class="contact-us">
-            <h4>Contact Us</h4>
+            <h4>Kontaktirajte nas</h4>
             <p>Mostar, 88000</p>
             <div class="row">
               <div class="col-lg-6">

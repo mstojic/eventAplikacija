@@ -47,12 +47,12 @@
           <nav class="main-nav">
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index">Home</a></li>
-              <li><a href="category">Category</a></li>
-              <li><a href="listing" class="active">Events</a></li>
-              <li><a href="contact">Contact Us</a></li>
+              <li><a href="index" class="active">Naslovnica</a></li>
+              <li><a href="category">Kategorije</a></li>
+              <li><a href="listing">Događaji</a></li>
+              <li><a href="contact">Kontakt</a></li>
               <li>
-                <div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Add Your Event</a></div>
+                <div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Dodajte svoj događaj</a></div>
               </li>
             </ul>
             <a class='menu-trigger'>
@@ -71,8 +71,8 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="top-text header-text">
-            <h6>Check Out Our Listings</h6>
-            <h2>Item listings of Different Categories</h2>
+            <h6>Pogledajte dostupne oglase</h6>
+            <h2>Oglasi za različite kategorije</h2>
           </div>
         </div>
       </div>
@@ -91,25 +91,25 @@
                     <div class="first-thumb active">
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
-                        Apartments
+                        Stanovi
                       </div>
                     </div>
                     <div>
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-02.png" alt=""></span>
-                        Food &amp; Life
+                        Hrana i Piće
                       </div>
                     </div>
                     <div>
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
-                        Cars
+                        Sport
                       </div>
                     </div>
                     <div class="last-thumb">
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/search-icon-04.png" alt=""></span>
-                        Traveling
+                        Konferencije
                       </div>
                     </div>
                   </div>
@@ -129,23 +129,23 @@
                                       <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
                                       <a href="#">
-                                        <h4>Sunshine Paradise Apartment</h4>
+                                        <h4>Event1</h4>
                                       </a>
-                                      <h6>by: Real ESTATE Agent</h6>
+                                      <h6>Organizator:</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $600 / month included tax
+                                        $600
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -155,23 +155,23 @@
                                       <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
                                       <a href="#">
-                                        <h4>Best one in this category</h4>
+                                        <h4>Event2</h4>
                                       </a>
-                                      <h6>by: Real ESTATE Agent</h6>
+                                      <h6>Organizator:</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $800 / month included tax
+                                        $800
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -181,23 +181,23 @@
                                       <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
                                       <a href="#">
-                                        <h4>Amazing Dj Party House</h4>
+                                        <h4>Event3</h4>
                                       </a>
-                                      <h6>by: Real ESTATE Agent</h6>
+                                      <h6>Organizator: </h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $950 / month included tax
+                                        $950
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -211,23 +211,23 @@
                                       <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
                                       <a href="#">
-                                        <h4>Sunshine Villa Condo</h4>
+                                        <h4>Event4</h4>
                                       </a>
-                                      <h6>by: Real ESTATE Agent</h6>
+                                      <h6>Organizator: </h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $450 / month included tax
+                                        $450
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -237,23 +237,23 @@
                                       <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
                                       <a href="#">
-                                        <h4>Gaming Studio Units</h4>
+                                        <h4>Event5</h4>
                                       </a>
-                                      <h6>by: Real ESTATE Agent</h6>
+                                      <h6>Organizator: </h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $550 / month included tax
+                                        $550
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -263,23 +263,23 @@
                                       <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
                                       <a href="#">
-                                        <h4>Amazing Dj Party House</h4>
+                                        <h4>Event6</h4>
                                       </a>
-                                      <h6>by: Real ESTATE Agent</h6>
+                                      <h6>Organizator: </h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $650 / month included tax
+                                        $650
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -295,23 +295,23 @@
                                       <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
                                       <a href="#">
-                                        <h4>Third Page Apartment</h4>
+                                        <h4>Event7</h4>
                                       </a>
-                                      <h6>by: Real Estate Agent</h6>
+                                      <h6>Organizator: </h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $600 to $950 / month included tax
+                                        $600 to $950
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -321,23 +321,23 @@
                                       <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
                                       <a href="#">
-                                        <h4>New Gaming Townhouse</h4>
+                                        <h4>Event8</h4>
                                       </a>
-                                      <h6>by: Real ESTATE Agent</h6>
+                                      <h6>Organizator: </h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $840 / month included tax
+                                        $840
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -347,23 +347,23 @@
                                       <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="right-content align-self-center">
                                       <a href="#">
-                                        <h4>Amazing Party Villa</h4>
+                                        <h4>Event9</h4>
                                       </a>
-                                      <h6>by: Real ESTATE Agent</h6>
+                                      <h6>Organizator: </h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $950 / month included tax
+                                        $950
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -387,7 +387,7 @@
                                       <a href="#"><img src="assets/images/listing-04.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -395,15 +395,15 @@
                                       <a href="#">
                                         <h4>Food First page</h4>
                                       </a>
-                                      <h6>by: Food Delivery</h6>
+                                      <h6>Organizator: Food Delivery</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $600 / month included tax
+                                        $600
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -413,7 +413,7 @@
                                       <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -421,15 +421,15 @@
                                       <a href="#">
                                         <h4>Food Item 2</h4>
                                       </a>
-                                      <h6>by: Food Delivery</h6>
+                                      <h6>Organizator: Food Delivery</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $540 / month included tax
+                                        $540
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -439,7 +439,7 @@
                                       <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -447,15 +447,15 @@
                                       <a href="#">
                                         <h4>Food Item 3</h4>
                                       </a>
-                                      <h6>by: Food Delivery</h6>
+                                      <h6>Organizator: Food Delivery</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $720 / month included tax
+                                        $720
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -471,7 +471,7 @@
                                       <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -479,15 +479,15 @@
                                       <a href="#">
                                         <h4>FOOD Second Page</h4>
                                       </a>
-                                      <h6>by: Food Delivery</h6>
+                                      <h6>Organizator: Food Delivery</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $420 / month included tax
+                                        $420
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -497,7 +497,7 @@
                                       <a href="#"><img src="assets/images/listing-04.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -505,15 +505,15 @@
                                       <a href="#">
                                         <h4>Best Food Item 5</h4>
                                       </a>
-                                      <h6>by: Food Delivery</h6>
+                                      <h6>Organizator: Food Delivery</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $450 / month included tax
+                                        $450
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -523,7 +523,7 @@
                                       <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -531,15 +531,15 @@
                                       <a href="#">
                                         <h4>Amazing Food Item 6</h4>
                                       </a>
-                                      <h6>by: Food Delivery</h6>
+                                      <h6>Organizator: Food Delivery</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $500 / month included tax
+                                        $500
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -565,7 +565,7 @@
                                       <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -573,15 +573,15 @@
                                       <a href="#">
                                         <h4>Third Category First Page</h4>
                                       </a>
-                                      <h6>by: Sale Agent</h6>
+                                      <h6>Organizator: Sale Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $750 / month included tax
+                                        $750
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -591,7 +591,7 @@
                                       <a href="#"><img src="assets/images/listing-04.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -599,15 +599,15 @@
                                       <a href="#">
                                         <h4>Car Item 2</h4>
                                       </a>
-                                      <h6>by: Sale Agent</h6>
+                                      <h6>Organizator: Sale Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $880 / month included tax
+                                        $880
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -617,7 +617,7 @@
                                       <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -625,15 +625,15 @@
                                       <a href="#">
                                         <h4>Car Item 3</h4>
                                       </a>
-                                      <h6>by: Sale Agent</h6>
+                                      <h6>Organizator: Sale Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $770 / month included tax
+                                        $770
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -649,7 +649,7 @@
                                       <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -657,15 +657,15 @@
                                       <a href="#">
                                         <h4>Third Category Second Page</h4>
                                       </a>
-                                      <h6>by: Sale Agent</h6>
+                                      <h6>Organizator: Sale Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $660 / month included tax
+                                        $660
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -675,7 +675,7 @@
                                       <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -683,15 +683,15 @@
                                       <a href="#">
                                         <h4>Car Item 5</h4>
                                       </a>
-                                      <h6>by: Sale Agent</h6>
+                                      <h6>Organizator: Sale Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $550 / month included tax
+                                        $550
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -701,7 +701,7 @@
                                       <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -709,15 +709,15 @@
                                       <a href="#">
                                         <h4>Car Item 6</h4>
                                       </a>
-                                      <h6>by: Sale Agent</h6>
+                                      <h6>Organizator: Sale Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $440 / month included tax
+                                        $440
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -746,7 +746,7 @@
                                       <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -754,15 +754,15 @@
                                       <a href="#">
                                         <h4>Traveling Item 1</h4>
                                       </a>
-                                      <h6>by: Travel Agent</h6>
+                                      <h6>Organizator: Travel Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $400 / month included tax
+                                        $400
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -772,7 +772,7 @@
                                       <a href="#"><img src="assets/images/listing-04.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -780,15 +780,15 @@
                                       <a href="#">
                                         <h4>Traveling Item 2</h4>
                                       </a>
-                                      <h6>by: Travel Agent</h6>
+                                      <h6>Organizator: Travel Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $500 / month included tax
+                                        $500
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -798,7 +798,7 @@
                                       <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -806,15 +806,15 @@
                                       <a href="#">
                                         <h4>Traveling Item 3</h4>
                                       </a>
-                                      <h6>by: Travel Agent</h6>
+                                      <h6>Organizator: Travel Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $342 / month included tax
+                                        $342
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -830,7 +830,7 @@
                                       <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -838,15 +838,15 @@
                                       <a href="#">
                                         <h4>4th Category 2nd Page</h4>
                                       </a>
-                                      <h6>by: Travel Agent</h6>
+                                      <h6>Organizator: Travel Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $268 / month included tax
+                                        $268
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -856,7 +856,7 @@
                                       <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -864,15 +864,15 @@
                                       <a href="#">
                                         <h4>Traveling Item 5</h4>
                                       </a>
-                                      <h6>by: Travel Agent</h6>
+                                      <h6>Organizator: Travel Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $145 / month included tax
+                                        $145
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -882,7 +882,7 @@
                                       <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -890,15 +890,15 @@
                                       <a href="#">
                                         <h4>Traveling Item 6</h4>
                                       </a>
-                                      <h6>by: Travel Agent</h6>
+                                      <h6>Organizator: Travel Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $240 / month included tax
+                                        $240
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -914,7 +914,7 @@
                                       <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
                                       <div class="hover-content">
                                         <div class="main-white-button">
-                                          <a href="contact"><i class="fa fa-eye"></i> Contact Now</a>
+                                          <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
                                         </div>
                                       </div>
                                     </div>
@@ -922,15 +922,15 @@
                                       <a href="#">
                                         <h4>4th Category 3rd Page</h4>
                                       </a>
-                                      <h6>by: Travel Agent</h6>
+                                      <h6>Organizator: Travel Agent</h6>
                                       <span class="price">
                                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
-                                        $360 / month included tax
+                                        $360
                                       </span>
-                                      <span class="details">Details: <em>860 sq ft</em></span>
+                                      <span class="details">Detalji: <em>860 sq ft</em></span>
                                       <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                        Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                        Bathrooms</span>
+                                        Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                        Kupatila</span>
                                     </div>
                                   </div>
                                 </div>
@@ -963,19 +963,19 @@
             <div class="logo">
               <img src="assets/images/black-logo.png" alt="Plot Listing" width="500" , width="100">
             </div>
-            <p> Best website for searching or publishing Events! </p>
+            <p>  Najbolja stranica za oglašavanje vaših događaja! </p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="helpful-links">
-            <h4>Helpful Links</h4>
+            <h4>Tražite nešto?</h4>
             <div class="row">
               <div class="col-lg-6 col-sm-6">
                 <ul>
-                  <li><a href="#">Categories</a></li>
-                  <li><a href="#">Kategory</a></li>
-                  <li><a href="#">Events</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Kategorije</a></li>
+                  <li><a href="#">Dodajte svoj događaj</a></li>
+                  <li><a href="#">Događaji</a></li>
+                  <li><a href="#">Kontaktirajte nas</a></li>
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -986,7 +986,7 @@
         </div>
         <div class="col-lg-4">
           <div class="contact-us">
-            <h4>Contact Us</h4>
+            <h4>Kontaktirajte nas</h4>
             <p>Mostar, 88000</p>
             <div class="row">
               <div class="col-lg-6">
