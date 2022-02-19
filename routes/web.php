@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::get('/category', function () {
+    return view('category');
 });
 
 Route::get('/contact', function () {
@@ -25,14 +30,17 @@ Route::get('/listing', function () {
     return view('listing');
 });
 
-Route::get('/category', function () {
-    return view('category');
-});
-
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/index', function () {
-    return view('index');
+//Admin rute
+Route::prefix('admin')->name('admin.')->group(function(){
+    Route::resource('/users', UserController::class);
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
