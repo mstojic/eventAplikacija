@@ -78,7 +78,7 @@
         <div class="col-lg-12">
           <div class="top-text header-text">
             <h6>DOBRODOŠLI!</h6>
-            <h2>Pronađite događaje u vašoj blizini</h2>
+            <h2>Pronađite dddogađaje u vašoj blizini</h2>
           </div>
         </div>
         <div class="col-lg-12">
