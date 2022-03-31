@@ -51,6 +51,7 @@
               <li><a href="/category">Kategorije</a></li>
               <li><a href="/listing">Događaji</a></li>
               <li><a href="/contact">Kontakt</a></li>
+              @can('logged-in')<li><a href="/admin/users">Korisnici</a></li>@endcan
               <li>
                 @guest
                 <div class="main-white-button"><a href="login"><i class="fa fa-user" aria-hidden="true"></i> PRIJAVITE SE</a></div>
@@ -79,8 +80,10 @@
       </div>
     </div>
   </header>
+  <header class="placeholder header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s"></header>
   <!-- ***** Header Area End ***** -->
 
+    @include('partials.alerts')
     @yield('content')
 
   <footer>

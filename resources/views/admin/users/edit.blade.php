@@ -11,9 +11,10 @@
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-        <p class="form-heading">Kreiranje novog korisnika<p>
-        <form method="POST" action="{{ route('admin.users.store') }}">
-            @include('admin.users.partials.form', ['create' => true])
+        <p class="form-heading">Uređivanje podataka korisnika<p>
+        <form method="POST" action="{{ route('admin.users.update', $user->id) }}">
+            @method('PATCH')
+            @include('admin.users.partials.form')
         </form>
     </x-auth-card>
 </x-guest-layout>

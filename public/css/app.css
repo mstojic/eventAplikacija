@@ -1421,3 +1421,10 @@ select {
   }
 }
 
+/*  Dodano  */
+
+.form-heading {
+  font-size: 17px;
+  text-align: center;
+}
+
