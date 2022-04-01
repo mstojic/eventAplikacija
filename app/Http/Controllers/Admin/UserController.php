@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Actions\Fortify\CreateNewUser;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use App\Http\Requests\StoreUserRequest;
 
 class UserController extends Controller
 {
@@ -20,7 +22,12 @@ class UserController extends Controller
         if(Gate::denies('logged-in')){
             dd('no access allowed');
         }
-        return view('admin.users.index', ['users' => User::paginate(10)]);
+
+        if(Gate::allows('is-admin')){
+            return view('admin.users.index', ['users' => User::paginate(10)]);
+        }
+
+        dd('you need to be admin');
     }
 
     /**
@@ -41,9 +48,11 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        $validatedData = $request->validated();
+        //$validatedData = $request->validated();
+        //$user = User::create($validatedData);
 
-        $user = User::create($validatedData);
+        $newUser = new CreateNewUser();
+        $user = $newUser->create($request->all());
 
         $user->roles()->sync($request->roles);
         $request->session()->flash('success', 'Uspješno ste kreirali novog korisnika');

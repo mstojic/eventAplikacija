@@ -51,7 +51,7 @@
               <li><a href="/category">Kategorije</a></li>
               <li><a href="/listing">Događaji</a></li>
               <li><a href="/contact">Kontakt</a></li>
-              @can('logged-in')<li><a href="/admin/users">Korisnici</a></li>@endcan
+              @can('is-admin')<li><a href="/admin/users">Korisnici</a></li>@endcan
               <li>
                 @guest
                 <div class="main-white-button"><a href="login"><i class="fa fa-user" aria-hidden="true"></i> PRIJAVITE SE</a></div>
@@ -101,7 +101,7 @@
           <div class="helpful-links">
             <h4>Tražite nešto?</h4>
             <div class="row">
-              <div class="col-lg-6 col-sm-6">
+              <div class="col-lg-6 col-sm-12">
                 <ul>
                   <li><a href="#">Kategorije</a></li>
                   <li><a href="#">Dodajte svoj događaj</a></li>
@@ -109,7 +109,7 @@
                   <li><a href="#">Kontaktirajte nas</a></li>
                 </ul>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-12">
 
               </div>
             </div>

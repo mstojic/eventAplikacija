@@ -43,13 +43,29 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function setPasswordAttribute($password)
+   /* public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = Hash::needsRehash($password) ? Hash::make($password) : $password;
     }
-
+    */
     public function roles() 
     {
         return $this->belongsToMany('App\Models\Role');
+    }
+
+    /**
+     * Provjera ima li korisnik ulogu
+     */
+    public function hasAnyRole($role) 
+    {
+        return null !== $this->roles()->where('role_name', $role)->first();
+    }
+
+    /**
+     * Provjera ima li korisnik ijednu od ponudenih uloga
+     */
+    public function hasAnyRoles($role) 
+    {
+        return null !== $this->roles()->whereIn('role_name', $role)->first();
     }
 }
