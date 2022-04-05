@@ -9,6 +9,7 @@ use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\StoreUserRequest;
+use Illuminate\Support\Facades\Password;
 
 class UserController extends Controller
 {
@@ -55,6 +56,9 @@ class UserController extends Controller
         $user = $newUser->create($request->all());
 
         $user->roles()->sync($request->roles);
+
+        Password::sendResetLink($request->only(['email']));
+
         $request->session()->flash('success', 'Uspješno ste kreirali novog korisnika');
 
         return redirect(route('admin.users.index'));
@@ -79,7 +83,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.users.edit', 
+        return view('admin.users.edit',
         [
             'roles' => Role::all(),
             'user' => User::find($id)

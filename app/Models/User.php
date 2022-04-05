@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -48,15 +48,21 @@ class User extends Authenticatable
         $this->attributes['password'] = Hash::needsRehash($password) ? Hash::make($password) : $password;
     }
     */
-    public function roles() 
+    public function roles()
     {
         return $this->belongsToMany('App\Models\Role');
     }
 
+    public function events()
+    {
+        return $this->belongsToMany('App\Models\Event');
+    }
+
+
     /**
      * Provjera ima li korisnik ulogu
      */
-    public function hasAnyRole($role) 
+    public function hasAnyRole($role)
     {
         return null !== $this->roles()->where('role_name', $role)->first();
     }
@@ -64,7 +70,7 @@ class User extends Authenticatable
     /**
      * Provjera ima li korisnik ijednu od ponudenih uloga
      */
-    public function hasAnyRoles($role) 
+    public function hasAnyRoles($role)
     {
         return null !== $this->roles()->whereIn('role_name', $role)->first();
     }

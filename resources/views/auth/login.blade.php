@@ -39,7 +39,7 @@
                     <span class="ml-2 text-sm text-gray-600">{{ __('Zapamti me') }}</span>
                 </label>
             </div>
-                            
+
             <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 hover:text-gray-900" style="margin-right: auto" href="{{ route('register') }}">
                 {{ __('Registrirajte se') }}
