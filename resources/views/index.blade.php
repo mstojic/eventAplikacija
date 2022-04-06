@@ -269,7 +269,7 @@
                       </ul>
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 - $950
-                        
+
                       </span>
                       <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
@@ -302,7 +302,7 @@
                       </ul>
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,400 - $3,500 /
-                        month 
+                        month
                       </span>
                       <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
@@ -335,7 +335,7 @@
                       </ul>
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,500 - $3,600 /
-                        month 
+                        month
                       </span>
                       <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
@@ -372,7 +372,7 @@
                       </ul>
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,600
-                        
+
                       </span>
                       <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
@@ -405,7 +405,7 @@
                       </ul>
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,600
-                        
+
                       </span>
                       <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
@@ -438,7 +438,7 @@
                       </ul>
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,850
-                        
+
                       </span>
                       <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
@@ -475,7 +475,7 @@
                       </ul>
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,450
-                        
+
                       </span>
                       <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
@@ -508,7 +508,7 @@
                       </ul>
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,520
-                        
+
                       </span>
                       <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">
@@ -541,7 +541,7 @@
                       </ul>
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $4,760
-                        
+
                       </span>
                       <span class="details">Detalji: <em>Detalji o događaju.</em></span>
                       <ul class="info">

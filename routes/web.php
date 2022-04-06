@@ -35,10 +35,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::prefix('user')->middlewaare(['auth', 'verified'])->name('user.')->group(function() {
-Route::get('users/{id}', function ($id) {
-
-});
+//User rute
+Route::prefix('user')->middleware(['auth', 'verified'])->name('user.')->group(function() {
+    Route::get('profile', Profile::class)->name('profile');
 });
 
 //Admin rute

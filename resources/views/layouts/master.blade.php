@@ -51,25 +51,28 @@
               <li><a href="/category">Kategorije</a></li>
               <li><a href="/listing">Događaji</a></li>
               <li><a href="/contact">Kontakt</a></li>
+              @auth
+                <li><a href="/user/profile">Profil</a></li>
+              @endauth
+
               @can('is-admin')<li><a href="/admin/users">Korisnici</a></li>@endcan
-              <li>
+              <li class="nav-button">
                 @guest
-                <div class="main-white-button"><a href="login"><i class="fa fa-user" aria-hidden="true"></i> PRIJAVITE SE</a></div>
+                    <div class="main-white-button"><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i> PRIJAVITE SE</a></div>
                 @endguest
                 @auth
-
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <div class="main-white-button">
-                        <a href="route('logout')" onclick="event.preventDefault();
-                            this.closest('form').submit();">
-                            <i class="fa fa-user" aria-hidden="true"></i> 
-                            ODJAVA
-                        </a>
-                    </div>
-                </form>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <div class="main-white-button">
+                            <a href="route('logout')" onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                ODJAVA
+                            </a>
+                        </div>
+                    </form>
                 @endauth
-              </li>
+               </li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
