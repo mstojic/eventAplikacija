@@ -13,6 +13,7 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('events');
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -20,9 +21,11 @@ class CreateEventsTable extends Migration
             $table->string('price');
             $table->string('date');
             $table->unsignedBigInteger('organizer_id');
+            $table->unsignedBigInteger('location_id');
             $table->timestamps();
 
             $table->foreign('organizer_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
         });
     }
 

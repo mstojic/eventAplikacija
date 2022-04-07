@@ -19,9 +19,9 @@
                   <select name="area" class="form-select" aria-label="Area" id="chooseCategory"
                     onchange="this.form.click()">
                     <option selected>Sva mjesta</option>
-                    <option value="New Village">Mostar</option>
-                    <option value="Old Town">Čapljina</option>
-                    <option value="Modern City">Neka lokacija</option>
+                        @foreach($locations as $location)
+                            <option value="New Village">{{ $location->name }}</option>
+                        @endforeach
                   </select>
                 </fieldset>
               </div>
@@ -247,8 +247,10 @@
         </div>
         <div class="col-lg-12">
           <div class="owl-carousel owl-listing">
+            @foreach($events as $event)
             <div class="item">
               <div class="row">
+
                 <div class="col-lg-12">
                   <div class="listing-item">
                     <div class="left-image">
@@ -256,9 +258,9 @@
                     </div>
                     <div class="right-content align-self-center">
                       <a href="#">
-                        <h4>1. Event1</h4>
+                        <h4>{{ Str::of($event->name)->limit(35) }}</h4>
                       </a>
-                      <h6>Organizator: </h6>
+                      <h6>Organizator: {{ $event->organizer->name }}</h6>
                       <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
@@ -268,10 +270,10 @@
                         <li>(18) Recenzije</li>
                       </ul>
                       <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 - $950
+                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> {{ $event->price }} KM
 
                       </span>
-                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
+                      <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(50) }}</em></span>
                       <ul class="info">
                         <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Soba</li>
                         <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li>
@@ -282,282 +284,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-12">
-                  <div class="listing-item">
-                    <div class="left-image">
-                      <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
-                    </div>
-                    <div class="right-content align-self-center">
-                      <a href="#">
-                        <h4>2. Event2</h4>
-                      </a>
-                      <h6>Organizator: </h6>
-                      <ul class="rate">
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li>(24) Recenzije</li>
-                      </ul>
-                      <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,400 - $3,500 /
-                        month
-                      </span>
-                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
-                      <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Soba</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Kupatila</li>
-                      </ul>
-                      <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="listing-item">
-                    <div class="left-image">
-                      <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
-                    </div>
-                    <div class="right-content align-self-center">
-                      <a href="#">
-                        <h4>3. Event3</h4>
-                      </a>
-                      <h6>Organizator: </h6>
-                      <ul class="rate">
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li>(36) Recenzije</li>
-                      </ul>
-                      <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $1,500 - $3,600 /
-                        month
-                      </span>
-                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
-                      <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Soba</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Kupatila</li>
-                      </ul>
-                      <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </div>
-            <div class="item">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="listing-item">
-                    <div class="left-image">
-                      <a href="#"><img src="assets/images/listing-04.jpg" alt=""></a>
-                    </div>
-                    <div class="right-content align-self-center">
-                      <a href="#">
-                        <h4>4. Event4</h4>
-                      </a>
-                      <h6>Organizator: </h6>
-                      <ul class="rate">
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li>(24) Recenzije</li>
-                      </ul>
-                      <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,600
-
-                      </span>
-                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
-                      <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 5 Soba</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Kupatila</li>
-                      </ul>
-                      <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="listing-item">
-                    <div class="left-image">
-                      <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
-                    </div>
-                    <div class="right-content align-self-center">
-                      <a href="#">
-                        <h4>5. Event5</h4>
-                      </a>
-                      <h6>Organizator: </h6>
-                      <ul class="rate">
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li>(32) Recenzije</li>
-                      </ul>
-                      <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,600
-
-                      </span>
-                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
-                      <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 6 Soba</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Kupatila</li>
-                      </ul>
-                      <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="listing-item">
-                    <div class="left-image">
-                      <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
-                    </div>
-                    <div class="right-content align-self-center">
-                      <a href="#">
-                        <h4>6. Event6</h4>
-                      </a>
-                      <h6>Organizator: </h6>
-                      <ul class="rate">
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li>(40) Recenzije</li>
-                      </ul>
-                      <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $3,850
-
-                      </span>
-                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
-                      <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Soba</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 3 Kupatila</li>
-                      </ul>
-                      <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="listing-item">
-                    <div class="left-image">
-                      <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
-                    </div>
-                    <div class="right-content align-self-center">
-                      <a href="#">
-                        <h4>7. Event7</h4>
-                      </a>
-                      <h6>Organizator: </h6>
-                      <ul class="rate">
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li>(24) Recenzije</li>
-                      </ul>
-                      <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,450
-
-                      </span>
-                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
-                      <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 8 Soba</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 5 Kupatila</li>
-                      </ul>
-                      <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="listing-item">
-                    <div class="left-image">
-                      <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
-                    </div>
-                    <div class="right-content align-self-center">
-                      <a href="#">
-                        <h4>8. Event8</h4>
-                      </a>
-                      <h6>Organizator: </h6>
-                      <ul class="rate">
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li>(15) Recenzije</li>
-                      </ul>
-                      <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $5,520
-
-                      </span>
-                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
-                      <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 5 Soba</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li>
-                      </ul>
-                      <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="listing-item">
-                    <div class="left-image">
-                      <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
-                    </div>
-                    <div class="right-content align-self-center">
-                      <a href="#">
-                        <h4>9. Event9</h4>
-                      </a>
-                      <h6>Organizator: </h6>
-                      <ul class="rate">
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li><i class="fa fa-star-o"></i></li>
-                        <li>(20) Recenzije</li>
-                      </ul>
-                      <span class="price">
-                        <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $4,760
-
-                      </span>
-                      <span class="details">Detalji: <em>Detalji o događaju.</em></span>
-                      <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 6 Soba</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li>
-                      </ul>
-                      <div class="main-white-button">
-                        <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
+
       </div>
     </div>
   </div>

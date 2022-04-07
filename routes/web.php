@@ -15,9 +15,9 @@ use User\Profile;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
+
+Route::get('/', 'EventController@index');
 
 Route::get('/category', function () {
     return view('category');
@@ -27,13 +27,8 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/listing', function () {
-    return view('listing');
-});
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/listing', 'EventController@listing');
 
 //User rute
 Route::prefix('user')->middleware(['auth', 'verified'])->name('user.')->group(function() {

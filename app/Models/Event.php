@@ -14,9 +14,14 @@ class Event extends Model
         return $this->belongsToMany('App\Models\User');
     }
 
-    public function categoires()
+    public function categories()
     {
         return $this->belongsToMany('App\Models\Category');
+    }
+
+    public function location()
+    {
+        return $this->belongsTo('App\Models\Category');
     }
 
     public function organizer()
