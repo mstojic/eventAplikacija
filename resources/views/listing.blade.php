@@ -24,12 +24,16 @@
                 <div class="col-lg-3">
                   <div class="menu">
                     @foreach($categories as $category)
-                    <div id={{ $category->name }} class="first-thumb active">
-                      <div class="thumb">
-                        <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
-                        {{ $category->name }}
-                      </div>
-                    </div>
+                        @if($loop->first)
+                            <div id={{ $category->name }} class="first-thumb active">
+                        @else
+                            <div id={{ $category->name }} class="first-thumb">
+                        @endif
+                                <div class="thumb">
+                                    <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
+                                    {{ $category->name }}
+                                </div>
+                            </div>
                     @endforeach
                   </div>
                 </div>
@@ -37,7 +41,11 @@
                   <ul class="nacc">
                       @foreach($categories as $category)
                     <!-- first category listing of items -->
+                    @if($loop->first)
                     <li class="active">
+                    @else
+                    <li class="">
+                    @endif
                       <div>
                         <div class="col-lg-12">
                           <div class="owl-carousel owl-listing">
