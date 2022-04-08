@@ -48,7 +48,7 @@
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="text" name="price" id="price" placeholder="Cijena"
+                        <input type="number" name="price" id="price" placeholder="Cijena"
                           required="">
                       </fieldset>
                     </div>
