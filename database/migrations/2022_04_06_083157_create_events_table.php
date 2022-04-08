@@ -20,8 +20,9 @@ class CreateEventsTable extends Migration
             $table->string('description');
             $table->string('price');
             $table->string('date');
+            $table->string('image')->default('/assets/images/listing-01.jpg');
             $table->unsignedBigInteger('organizer_id');
-            $table->unsignedBigInteger('location_id');
+            $table->unsignedBigInteger('location_id')->default(0);
             $table->timestamps();
 
             $table->foreign('organizer_id')->references('id')->on('users')->onDelete('cascade');

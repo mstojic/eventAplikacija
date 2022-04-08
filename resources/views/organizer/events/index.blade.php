@@ -6,14 +6,19 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="top-text header-text">
-            <h6>Pogledajte dostupne oglase</h6>
-            <h2>Oglasi za različite kategorije</h2>
+            <h6>Popis svih događaja koje ste kreirali</h6>
+            <h2>Vaši oglasi</h2>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  <div class="text-center pt-5">
+  <a class="btn btn-lg btn-success" href="{{ route('organizer.events.create') }}" role="button">
+    <i class="fa fa-plus" aria-hidden="true"></i>
+    Dodajte novi događaj
+</a>
+  </div>
   <div class="listing-page">
     <div class="container">
       <div class="row">
@@ -21,38 +26,14 @@
           <div class="naccs">
             <div class="grid">
               <div class="row">
-                <div class="col-lg-3">
-                  <div class="menu">
-                    @foreach($categories as $category)
-                        @if($loop->first)
-                            <div id={{ $category->name }} class="first-thumb active">
-                        @else
-                            <div id={{ $category->name }} class="first-thumb">
-                        @endif
-                                <div class="thumb">
-                                    <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
-                                    {{ $category->name }}
-                                </div>
-                            </div>
-                    @endforeach
-                  </div>
-                </div>
-                <div class="col-lg-9">
+
+                <div class="col-lg-12">
                   <ul class="nacc">
-                      @foreach($categories as $category)
-                    <!-- first category listing of items -->
-                    @if($loop->first)
-                    <li class="active">
-                    @else
-                    <li class="">
-                    @endif
                       <div>
+                        @foreach($events as $event)
+                        @if ($event->organizer->id == auth()->user()->id)
                         <div class="col-lg-12">
                           <div class="owl-carousel owl-listing">
-
-                            @foreach($events as $event)
-                                @foreach ($event->categories as $event_category )
-                                    @if ($event_category->name == $category->name)
                                     <div class="item">
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -67,30 +48,42 @@
                                             </div>
                                             <div class="right-content align-self-center">
                                             <a href="#">
-                                                <h4>{{ Str::of($event->name)->limit(30) }}</h4>
+                                                <h4>{{ Str::of($event->name)->limit(50) }}</h4>
                                             </a>
                                             <h6>Organizator: {{ $event->organizer->name }}</h6>
                                             <span class="price">
-                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                                <div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div>
                                                 {{ $event->price }} KM
                                             </span>
-                                            <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(35) }}</em></span>
-                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                                Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
-                                                Kupatila</span>
+                                            <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(70) }}</em></span>
+                                            <span class="info">
+                                                <img src="/assets/images/listing-icon-02.png" alt=""> 2 Sobe<br>
+                                                <img src="/assets/images/listing-icon-03.png" alt=""> 3 Kupatila
+
+                                            </span><br>
+                                            <button type="button" class="btn btn-sm btn-danger mt-3"  onclick="event.preventDefault();
+                                            document.getElementById('delete-event-form-{{ $event->id }}').submit()">
+                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                Uklonite događaj
+                                            </button>
+                                            <form id="delete-event-form-{{ $event->id }}" action="{{ route('organizer.events.destroy', $event->id) }}" method="POST" style="display: none">
+                                                @csrf
+                                                @method("DELETE")
+                                            </form>
+
                                             </div>
                                         </div>
                                         </div>
                                     </div>
                                     </div>
-                                    @endif
-                                @endforeach
-                            @endforeach
+
                           </div>
                         </div>
+                        @endif
+                        @endforeach
                       </div>
                     </li>
-                    @endforeach
+
 
                     <!-- second category listing of items -->
 

@@ -51,6 +51,7 @@
               <li><a href="/category">Kategorije</a></li>
               <li><a href="/listing">Događaji</a></li>
               <li><a href="/contact">Kontakt</a></li>
+              @can('is-organizer')<li><a href="/organizer/events">Vaši događaji</a></li>@endcan
               @auth
                 <li><a href="/user/profile">Profil</a></li>
               @endauth

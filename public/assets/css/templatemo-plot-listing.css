@@ -1223,12 +1223,22 @@ contact
   border-bottom-left-radius: 7px;
 }
 
+.contact-page .inner-content #eventImg {
+    display: flex;
+    margin-bottom: -8px;
+    overflow: hidden;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    padding: 30px;
+    min-height: 450px;
+  }
+
 form#contact {
   position: relative;
   margin: 0px 60px 0px 45px;
 }
 
-form#contact input {
+form#contact input, form#contact select {
   width: 100%;
   height: 46px;
   border-radius: 7px;
@@ -1719,7 +1729,7 @@ Listing Page
 
 .listing-page .item .right-content {
   display: inline-block;
-  padding: 45px;
+  padding: 42px;
 }
 
 .listing-page .item .right-content h4 {
@@ -2104,3 +2114,5 @@ responsive
   -o-transition: all .5s ease 0s;
   transition: all .5s ease 0s;
 }
+
+

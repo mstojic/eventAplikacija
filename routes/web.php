@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Admin\UserController;
+use Organizer\OrganizerEventController;
 use User\Profile;
 
 /*
@@ -27,8 +28,11 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-
 Route::get('/listing', 'EventController@listing');
+
+Route::prefix('organizer')->middleware(['auth', 'auth.isOrganizer', 'verified'])->name('organizer.')->group(function(){
+    Route::resource('/events', OrganizerEventController::class);
+});
 
 //User rute
 Route::prefix('user')->middleware(['auth', 'verified'])->name('user.')->group(function() {
