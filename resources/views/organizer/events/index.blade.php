@@ -39,15 +39,15 @@
                                         <div class="col-lg-12">
                                         <div class="listing-item">
                                             <div class="left-image">
-                                            <a href="#"><img src="{{ $event->image }}" alt=""></a>
+                                            <a href="{{ route('organizer.events.edit', $event->id) }}"><img src="{{ $event->image }}" alt=""></a>
                                             <div class="hover-content">
                                                 <div class="main-white-button">
-                                                <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>
+                                                <a href="{{ route('organizer.events.edit', $event->id) }}"><i class="fa fa-eye"></i> Uredite podatke</a>
                                                 </div>
                                             </div>
                                             </div>
                                             <div class="right-content align-self-center">
-                                            <a href="#">
+                                            <a href="{{ route('organizer.events.edit', $event->id) }}">
                                                 <h4>{{ Str::of($event->name)->limit(50) }}</h4>
                                             </a>
                                             <h6>Organizator: {{ $event->organizer->name }}</h6>

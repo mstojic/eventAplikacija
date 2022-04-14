@@ -66,7 +66,7 @@
                                             </div>
                                             </div>
                                             <div class="right-content align-self-center">
-                                            <a href="#">
+                                            <a href="{{ route('details', $event->id) }}">
                                                 <h4>{{ Str::of($event->name)->limit(30) }}</h4>
                                             </a>
                                             <h6>Organizator: {{ $event->organizer->name }}</h6>

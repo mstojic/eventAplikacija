@@ -30,6 +30,8 @@ Route::get('/contact', function () {
 
 Route::get('/listing', 'EventController@listing');
 
+Route::get('/details/{id}', 'EventController@details')->name('details');
+
 Route::prefix('organizer')->middleware(['auth', 'auth.isOrganizer', 'verified'])->name('organizer.')->group(function(){
     Route::resource('/events', OrganizerEventController::class);
 });

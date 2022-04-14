@@ -91,4 +91,20 @@ class EventController extends Controller
     {
         //
     }
+
+    public function details($id)
+    {
+        return view('details',
+        [
+            'event' => Event::find($id),
+        ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Organizer;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use App\Models\Event;
 use App\Models\Location;
 use App\Models\Category;
@@ -17,7 +18,19 @@ class OrganizerEventController extends Controller
      */
     public function index()
     {
-        return view('organizer.events.index', ['events' => Event::all()], ['categories' => Category::all()]);
+        if(Gate::denies('logged-in')){
+            dd('no access allowed');
+        }
+
+        if(Gate::allows('is-organizer')){
+            return view('organizer.events.index',
+            [
+                'events' => Event::all(),
+                'categories' => Category::all()
+            ]);
+        }
+
+        dd('you need to be organizer');
     }
 
     /**
@@ -69,7 +82,12 @@ class OrganizerEventController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('organizer.events.edit',
+        [
+            'event' => Event::find($id),
+            'locations' => Location::all(),
+            'categories' => Category::all(),
+        ]);
     }
 
     /**
@@ -81,7 +99,19 @@ class OrganizerEventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $event = Event::find($id);
+
+        if(!$event) {
+            $request->session()->flash('error', 'Ne možete urediti podatke o ovom događaju');
+            return redirect(route('organizer.events.index'));
+        }
+
+        $event->update($request->except(['_token', 'categories']));
+        $event->categories()->sync($request->categories);
+
+        $request->session()->flash('success', 'Uspješno ste uredili podatke o događaju');
+
+        return redirect(route('organizer.events.index'));
     }
 
     /**
