@@ -31,7 +31,7 @@ class Event extends Model
 
     public function location()
     {
-        return $this->belongsTo('App\Models\Category');
+        return $this->belongsTo('App\Models\Location');
     }
 
     public function organizer()

@@ -56,7 +56,7 @@
             <li><a href="category"><span class="icon"><img src="assets/images/search-icon-01.png"
                     alt="Home"></span> Koncerti</a></li>
             <li><a href="listing"><span class="icon"><img src="assets/images/search-icon-02.png" alt="Food"></span>
-                Hrana &amp; Život</a></li>
+                Hrana</a></li>
             <li><a href="#"><span class="icon"><img src="assets/images/search-icon-03.png" alt="Vehicle"></span>
                 Sport</a></li>
             <li><a href="#"><span class="icon"><img src="assets/images/search-icon-04.png" alt="Shopping"></span>
@@ -254,10 +254,10 @@
                 <div class="col-lg-12">
                   <div class="listing-item">
                     <div class="left-image">
-                      <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
+                      <a href="{{ route('details', $event->id) }}"><img src="{{ $event->image }}" alt=""></a>
                     </div>
                     <div class="right-content align-self-center">
-                      <a href="#">
+                      <a href="{{ route('details', $event->id) }}">
                         <h4>{{ Str::of($event->name)->limit(35) }}</h4>
                       </a>
                       <h6>Organizator: {{ $event->organizer->name }}</h6>

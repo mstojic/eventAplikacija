@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-  <div class="text-center pt-5">
+  <div class="text-end container pt-5">
   <a class="btn btn-lg btn-success" href="{{ route('organizer.events.create') }}" role="button">
     <i class="fa fa-plus" aria-hidden="true"></i>
     Dodajte novi događaj
@@ -42,7 +42,10 @@
                                             <a href="{{ route('organizer.events.edit', $event->id) }}"><img src="{{ $event->image }}" alt=""></a>
                                             <div class="hover-content">
                                                 <div class="main-white-button">
-                                                <a href="{{ route('organizer.events.edit', $event->id) }}"><i class="fa fa-eye"></i> Uredite podatke</a>
+                                                <a href="{{ route('organizer.events.edit', $event->id) }}"><i class="fa fa-edit"></i> Uredite podatke&nbsp;&nbsp;</a>
+                                                </div>
+                                                <div class="main-white-button organizer-delete-button mt-5">
+                                                    <a onclick="event.preventDefault(); document.getElementById('delete-event-form-{{ $event->id }}').submit()"><i class="fa fa-trash"></i> Uklonite događaj</a>
                                                 </div>
                                             </div>
                                             </div>
@@ -61,11 +64,7 @@
                                                 <img src="/assets/images/listing-icon-03.png" alt=""> 3 Kupatila
 
                                             </span><br>
-                                            <button type="button" class="btn btn-sm btn-danger mt-3"  onclick="event.preventDefault();
-                                            document.getElementById('delete-event-form-{{ $event->id }}').submit()">
-                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                Uklonite događaj
-                                            </button>
+
                                             <form id="delete-event-form-{{ $event->id }}" action="{{ route('organizer.events.destroy', $event->id) }}" method="POST" style="display: none">
                                                 @csrf
                                                 @method("DELETE")

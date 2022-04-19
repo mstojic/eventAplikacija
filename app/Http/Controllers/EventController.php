@@ -18,7 +18,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('index', ['events' => Event::paginate(3)], ['locations' => Location::all()]);
+        return view('index', ['events' => Event::latest()->paginate(3)], ['locations' => Location::all()]);
     }
 
     public function listing()
@@ -96,7 +96,7 @@ class EventController extends Controller
     {
         return view('details',
         [
-            'event' => Event::find($id),
+            'event' => Event::find($id)
         ]);
     }
 

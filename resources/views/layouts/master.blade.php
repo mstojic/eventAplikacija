@@ -48,18 +48,19 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="/">Naslovnica</a></li>
-              <li><a href="/category">Kategorije</a></li>
+              <!--<li><a href="/category">Kategorije</a></li> -->
               <li><a href="/listing">Događaji</a></li>
               <li><a href="/contact">Kontakt</a></li>
               @can('is-organizer')<li><a href="/organizer/events">Vaši događaji</a></li>@endcan
               @auth
+                <li><a href="/user/events/reserved-events">Rezervirani događaji</a></li>
                 <li><a href="/user/profile">Profil</a></li>
               @endauth
 
               @can('is-admin')<li><a href="/admin/users">Korisnici</a></li>@endcan
               <li class="nav-button">
                 @guest
-                    <div class="main-white-button"><a href="login"><i class="fa fa-sign-in" aria-hidden="true"></i> PRIJAVITE SE</a></div>
+                    <div class="main-white-button"><a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> PRIJAVITE SE</a></div>
                 @endguest
                 @auth
                     <form method="POST" action="{{ route('logout') }}">
