@@ -1,25 +1,27 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="users-container container">
-    
-    <div class="row mb-4">
-        <div class="col-12">
-            <h2 class="float-start">Korisnici</h2>
+<div class="row">
+@include('components.admin-side-nav')
+<div class="control-panel-container container col-lg-10">
+
+    <div class="row mb-2">
+        <div class="col-12 px-3">
+            <h5 class="float-start control-panel-heading">Korisnici</h5>
             <a class="btn btn-sm btn-success float-end" href="{{ route('admin.users.create') }}" role="button">
                 <i class="fa fa-plus" aria-hidden="true"></i>
             </a>
         </div>
-    </div> 
+    </div>
 
-    <div class="card">
-        <table class="table">
+    <div>
+        <table class="table" style="">
             <thead>
                 <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Ime</th>
                 <th scope="col">Email</th>
-                <th scope="col">Operacije</th>
+                <th scope="col" class="text-end">Operacije</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,7 +30,7 @@
                 <th scope="row">{{ $user->id }}</th>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
-                <td>
+                <td class="text-end">
                     <a class="btn btn-sm btn-primary" href="{{ route('admin.users.edit', $user->id) }}" role="button">
                         <i class="fa fa-edit" aria-hidden="true"></i>
                     </a>
@@ -45,7 +47,8 @@
                 @endforeach
             </tbody>
         </table>
-        {{ $users->links() }}
+        &nbsp;{{ $users->links() }}
     </div>
+</div>
 </div>
 @stop

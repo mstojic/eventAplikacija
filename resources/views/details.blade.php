@@ -25,15 +25,11 @@
         </div>
         <div class="col-lg-12">
           <div class="owl-carousel owl-listing">
-
             <div class="item">
               <div class="row">
-
                 <div class="col-lg-12">
                   <div class="listing-item">
-
                     <div class="right-content align-self-center">
-
                       <h6>Organizator: {{ $event->organizer->name }}</h6>
                      <!-- <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
@@ -55,21 +51,45 @@
                         <li><img src="/assets/images/listing-icon-02.png" alt=""> 4 Soba</li>
                         <li><img src="/assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li>
                       </ul>
-                      <div class="main-white-button details-main-button">
-                        <a href="contact"><i class="fa fa-check"></i> Prijavite se na događaj</a>
+
+                     @auth
+                     @if($event->organizer_id != $user->id)
+                     @if($event->users->contains('id', $user->id))
+                      <div class="main-white-button details-main-button-cancel">
+                        <a type="submit" onclick="event.preventDefault(); document.getElementById('detach-event-form-{{ $event->id }}').submit()"><i class="fa fa-trash"></i> Otkažite rezervaciju</a>
                       </div>
+                      <form id="detach-event-form-{{ $event->id }}" action="{{ route('user.events.destroy', $event->id) }}" method="POST" style="display: none">
+                        @csrf
+                        @method("DELETE")
+                      </form>
+                    @else
+                      <div class="main-white-button details-main-button">
+                        <a type="submit" onclick="event.preventDefault(); document.getElementById('attach-event-form-{{ $event->id }}').submit()"><i class="fa fa-check"></i> Prijavite se na događaj</a>
+                      </div>
+                      <form id="attach-event-form-{{ $event->id }}" action="{{ route('user.events.store', $event->id) }}" method="POST" style="display: none">
+                        @csrf
+                        @method("POST")
+                        <input name="id" type="hidden" value="{{ $event->id }}">
+                      </form>
+                    @endif
+                    @endif
+                    @endauth
+
+                    @guest
+                    <div class="main-white-button details-main-button">
+                        <a href="/login" type="submit"><i class="fa fa-check"></i> Prijavite se na događaj</a>
+                      </div>
+                    @endguest
+
+
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
   </div>
-
 @stop

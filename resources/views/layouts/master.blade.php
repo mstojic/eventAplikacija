@@ -40,7 +40,7 @@
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+  <header class="header-area header-sticky wow" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -53,11 +53,11 @@
               <li><a href="/contact">Kontakt</a></li>
               @can('is-organizer')<li><a href="/organizer/events">Vaši događaji</a></li>@endcan
               @auth
-                <li><a href="/user/events/reserved-events">Rezervirani događaji</a></li>
+                <li><a href="/user/events/">Rez. događaji</a></li>
                 <li><a href="/user/profile">Profil</a></li>
               @endauth
 
-              @can('is-admin')<li><a href="/admin/users">Korisnici</a></li>@endcan
+              @can('is-admin')<li><a href="/admin/users">Admin</a></li>@endcan
               <li class="nav-button">
                 @guest
                     <div class="main-white-button"><a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> PRIJAVITE SE</a></div>
@@ -85,7 +85,7 @@
       </div>
     </div>
   </header>
-  <header class="placeholder header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s"></header>
+  <header class="placeholder header-area header-sticky wow" data-wow-duration="0.75s" data-wow-delay="0s"></header>
   <!-- ***** Header Area End ***** -->
 
     @include('partials.alerts')

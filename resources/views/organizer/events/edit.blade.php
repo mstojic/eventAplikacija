@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <div class="contact-page">
+  <div class="organizer-form">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">

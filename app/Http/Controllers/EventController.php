@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
-use App\Models\Location;
-use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreEventRequest;
 use App\Http\Requests\UpdateEventRequest;
+use App\Models\User;
+use App\Models\Event;
+use App\Models\Location;
+use App\Models\Category;
 
 class EventController extends Controller
 {
@@ -96,7 +98,8 @@ class EventController extends Controller
     {
         return view('details',
         [
-            'event' => Event::find($id)
+            'event' => Event::find($id),
+            'user' =>  User::find(Auth::id())
         ]);
     }
 

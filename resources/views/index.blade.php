@@ -261,14 +261,14 @@
                         <h4>{{ Str::of($event->name)->limit(35) }}</h4>
                       </a>
                       <h6>Organizator: {{ $event->organizer->name }}</h6>
-                      <ul class="rate">
+                    <!--  <ul class="rate">
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li><i class="fa fa-star-o"></i></li>
                         <li>(18) Recenzije</li>
-                      </ul>
+                      </ul> -->
                       <span class="price">
                         <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> {{ $event->price }} KM
 

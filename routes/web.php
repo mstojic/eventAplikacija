@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Admin\UserController;
+use Admin\AdminEventController;
 use Organizer\OrganizerEventController;
 use User\Profile;
+use User\ReservedEventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,12 +40,14 @@ Route::prefix('organizer')->middleware(['auth', 'auth.isOrganizer', 'verified'])
 
 //User rute
 Route::prefix('user')->middleware(['auth', 'verified'])->name('user.')->group(function() {
+    Route::resource('/events', ReservedEventController::class);
     Route::get('profile', Profile::class)->name('profile');
 });
 
 //Admin rute
 Route::prefix('admin')->middleware(['auth', 'auth.isAdmin', 'verified'])->name('admin.')->group(function(){
     Route::resource('/users', UserController::class);
+    Route::resource('/events', AdminEventController::class);
 });
 
 Route::get('/dashboard', function () {

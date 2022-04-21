@@ -60,6 +60,8 @@ class OrganizerEventController extends Controller
 
         $event->categories()->sync($request->categories);
 
+        $request->session()->flash('success', 'Uspješno ste kreirali novi događaj.');
+
         return redirect(route('organizer.events.index'));
     }
 
@@ -102,14 +104,14 @@ class OrganizerEventController extends Controller
         $event = Event::find($id);
 
         if(!$event) {
-            $request->session()->flash('error', 'Ne možete urediti podatke o ovom događaju');
+            $request->session()->flash('error', 'Ne možete urediti podatke o ovom događaju.');
             return redirect(route('organizer.events.index'));
         }
 
         $event->update($request->except(['_token', 'categories']));
         $event->categories()->sync($request->categories);
 
-        $request->session()->flash('success', 'Uspješno ste uredili podatke o događaju');
+        $request->session()->flash('success', 'Uspješno ste uredili podatke o događaju.');
 
         return redirect(route('organizer.events.index'));
     }
@@ -120,9 +122,11 @@ class OrganizerEventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, Request $request)
     {
         Event::destroy($id);
+
+        $request->session()->flash('success', 'Uspješno ste obrisali događaj.');
 
         return redirect(route('organizer.events.index'));
     }
