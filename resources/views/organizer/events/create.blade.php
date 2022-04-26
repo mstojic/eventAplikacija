@@ -59,11 +59,16 @@
                       </div>
                     <div class="col-lg-12">
                         <fieldset>
-                            <ul class="form-categories">
-                                @foreach ($categories as  $category)
-                                <li><input type="checkbox" name="categories[]" value={{ $category->id }} /> {{ $category->name }} </li>
-                                @endforeach
-                            </ul>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Kategorije
+                                </button>
+                                <ul class="dropdown-menu form-categories" aria-labelledby="dropdownMenuButton1">
+                                  @foreach ($categories as  $category)
+                                    <li><input type="checkbox" name="categories[]" value={{ $category->id }} /> {{ $category->name }} </li>
+                                  @endforeach
+                                </ul>
+                              </div>
                         </fieldset>
                       <fieldset>
                         <textarea name="description" type="text" class="form-control" id="description" placeholder="Detalji"

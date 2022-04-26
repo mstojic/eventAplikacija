@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Admin\UserController;
 use Admin\AdminEventController;
+use Admin\AdminCategoryController;
+use Admin\AdminLocationController;
 use Organizer\OrganizerEventController;
 use User\Profile;
 use User\ReservedEventController;
@@ -48,6 +50,8 @@ Route::prefix('user')->middleware(['auth', 'verified'])->name('user.')->group(fu
 Route::prefix('admin')->middleware(['auth', 'auth.isAdmin', 'verified'])->name('admin.')->group(function(){
     Route::resource('/users', UserController::class);
     Route::resource('/events', AdminEventController::class);
+    Route::resource('/categories', AdminCategoryController::class);
+    Route::resource('/locations', AdminLocationController::class);
 });
 
 Route::get('/dashboard', function () {

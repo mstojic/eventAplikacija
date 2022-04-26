@@ -323,37 +323,37 @@ header
   padding-right: 30px;
 }
 
-.header-area .main-nav .nav li:last-child {
-  padding-right: 0px;
-  padding-left: 40px;
+.header-area .main-nav .nav li.nav-button {
+  /*padding-right: 0px;
+  padding-left: 40px;*/
 }
 
-.header-area .main-nav .nav li:last-child a ,
-.background-header .main-nav .nav li:last-child a {
+.header-area .main-nav .nav li.nav-button a ,
+.background-header .main-nav .nav li.nav-button a {
   color: #2a2a2a !important;
   text-transform: capitalize;
   padding: 0px 20px;
   font-weight: 400;
 }
 
-.header-area .main-nav .nav li:last-child a i,
-.background-header .main-nav .nav li:last-child a i {
+.header-area .main-nav .nav li.nav-button a i,
+.background-header .main-nav .nav li.nav-button a i {
   font-size: 12px!important;
   font-weight: 400 !important;
 }
 
-.background-header .main-nav .nav li:last-child .main-white-button a {
+.background-header .main-nav .nav li.nav-button .main-button-link {
   background-color: #8d99af;
   color: #fff !important;
 }
 
-.background-header .main-nav .nav li:last-child .main-white-button a i {
+.background-header .main-nav .nav li.nav-button .main-white-button a i {
   background-color: #fff;
   color: #8d99af;
 }
 
-.header-area .main-nav .nav li:last-child a:hover,
-.header-area .main-nav .nav li:last-child a.active {
+.header-area .main-nav .nav li.nav-button a.main-button-link:hover,
+.header-area .main-nav .nav li.nav-button a.main-button-link.active {
   color: #fff !important;
 }
 
@@ -373,19 +373,19 @@ header
   letter-spacing: 1px;
 }
 
-.header-area .main-nav .nav li:hover a,
-.header-area .main-nav .nav li a.active {
+.header-area .main-nav .nav li.nav-item:hover a,
+.header-area .main-nav .nav li.nav-item a.active {
   color: #8d99af!important;
 }
 
-.background-header .main-nav .nav li:hover a,
-.background-header .main-nav .nav li a.active {
+.background-header .main-nav .nav li.nav-item:hover a,
+.background-header .main-nav .nav li.nav-item a.active {
   color: #8d99af!important;
   opacity: 1;
 }
 
-.header-area .main-nav .nav li:last-child a:hover ,
-.background-header .main-nav .nav li:last-child a:hover {
+.header-area .main-nav .nav li.nav-button a.main-button-link:hover ,
+.background-header .main-nav .nav li.nav-button a.main-button-link:hover {
   background-color: #8d99af;
 }
 
@@ -601,8 +601,8 @@ header
 }
 
 @media (max-width: 992px) {
-  .header-area .main-nav .nav li:last-child  ,
-  .background-header .main-nav .nav li:last-child {
+  .header-area .main-nav .nav li.nav-button  ,
+  .background-header .main-nav .nav li.nav-button {
     display: none;
   }
   .header-area .main-nav .nav li:nth-child(6),
@@ -2116,12 +2116,12 @@ responsive
 /*Novo*/
 
 .control-panel-container {
+    min-height: 626.8px;
     padding: 10px 15px 10px 0px;
-    box-shadow: -5px 0px 20px whitesmoke;
+    border-left: 0.5px solid gainsboro;
 }
 
 .control-panel-container table {
-    min-height: 626.8px;
     border-top: 1px solid gainsboro
 }
 
@@ -2279,3 +2279,24 @@ responsive
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
+.dropdown-item {
+    text-transform: uppercase !important;
+    padding: 0.25rem 1rem !important;
+}
+
+
+.main-white-button li a {
+    background-color: white !important;
+}
+
+.main-white-button li:hover a {
+    color: #8d99af !important;
+}
+
+.nav-button {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+

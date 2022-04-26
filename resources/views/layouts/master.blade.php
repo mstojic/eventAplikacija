@@ -47,26 +47,35 @@
           <nav class="main-nav">
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="/">Naslovnica</a></li>
+              <li class="nav-item"><a href="/">Naslovnica</a></li>
               <!--<li><a href="/category">Kategorije</a></li> -->
-              <li><a href="/listing">Događaji</a></li>
-              <li><a href="/contact">Kontakt</a></li>
-              @can('is-organizer')<li><a href="/organizer/events">Vaši događaji</a></li>@endcan
+              <li class="nav-item"><a href="/listing">Događaji</a></li>
+              <li class="nav-item"><a href="/contact">Kontakt</a></li>
+              <li class="nav-item"><a href="/category">Kategorije</a></li>
               @auth
-                <li><a href="/user/events/">Rez. događaji</a></li>
-                <li><a href="/user/profile">Profil</a></li>
+              <li class="nav-button">
+              <div class="dropdown main-white-button">
+                <a class="dropdown-toggle main-button-link" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-user" aria-hidden="true"></i>&nbsp;OPCIJE
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                @can('is-admin')<li><a class="dropdown-item" href="/admin/users">Administracija</a></li>@endcan
+                @can('is-organizer')<li><a class="dropdown-item" href="/organizer/events">Vaši događaji</a></li>@endcan
+                    <li><a class="dropdown-item" href="/user/events/">Rezervirani događaji</a></li>
+                    <li><a class="dropdown-item" href="/user/profile">Profil</a></li>
+                </ul>
+              </div>
+              </li>
               @endauth
-
-              @can('is-admin')<li><a href="/admin/users">Admin</a></li>@endcan
               <li class="nav-button">
                 @guest
-                    <div class="main-white-button"><a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> PRIJAVITE SE</a></div>
+                    <div class="main-white-button"><a class="main-button-link" href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> PRIJAVITE SE</a></div>
                 @endguest
                 @auth
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <div class="main-white-button">
-                            <a href="route('logout')" onclick="event.preventDefault();
+                            <a class="main-button-link" href="route('logout')" onclick="event.preventDefault();
                                 this.closest('form').submit();">
                                 <i class="fa fa-sign-out" aria-hidden="true"></i>
                                 ODJAVA
@@ -149,6 +158,7 @@
 
 
   <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
   <script type="text/javascript" src={{asset('/vendor/jquery/jquery.min.js')}}></script>
   <script type="text/javascript" src={{asset('/vendor/bootstrap/js/bootstrap.bundle.min.js')}}></script>
   <script type="text/javascript" src={{asset('/assets/js/owl-carousel.js')}}></script>

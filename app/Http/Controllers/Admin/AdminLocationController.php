@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Models\User;
-use App\Models\Event;
-use App\Models\Category;
 use App\Models\Location;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
-class AdminEventController extends Controller
+class AdminLocationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +21,7 @@ class AdminEventController extends Controller
         }
 
         if(Gate::allows('is-admin')){
-            return view('admin.events.index', ['events' => Event::paginate(10)]);
+            return view('admin.locations.index', ['locations' => Location::paginate(10)]);
         }
 
         dd('you need to be admin');
@@ -37,12 +34,7 @@ class AdminEventController extends Controller
      */
     public function create()
     {
-        return view('admin.events.create',
-        [
-            'categories' => Category::all(),
-            'organizers' => User::all(),
-            'locations' => Location::all()
-        ]);
+        return view('admin.locations.create');
     }
 
     /**
@@ -53,13 +45,11 @@ class AdminEventController extends Controller
      */
     public function store(Request $request)
     {
-        $event =  Event::create($request->all());
+        $location =  Location::create($request->all());
 
-        $event->categories()->sync($request->categories);
+        $request->session()->flash('success', 'Uspješno ste kreirali novu lokaciju');
 
-        $request->session()->flash('success', 'Uspješno ste kreirali novi događaj');
-
-        return redirect(route('admin.events.index'));
+        return redirect(route('admin.locations.index'));
     }
 
     /**
@@ -81,13 +71,7 @@ class AdminEventController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.events.edit',
-        [
-            'categories' => Category::all(),
-            'organizers' => User::all(),
-            'locations' => Location::all(),
-            'event' => Event::find($id)
-        ]);
+        return view('admin.locations.edit', ['location' => Location::find($id)]);
     }
 
     /**
@@ -99,19 +83,18 @@ class AdminEventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $event = Event::find($id);
+        $location = Location::find($id);
 
-        if(!$event) {
-            $request->session()->flash('error', 'Ne možete urediti podatke ovog događaja');
-            return redirect(route('admin.events.index'));
+        if(!$location) {
+            $request->session()->flash('error', 'Ne možete urediti podatke ove lokacije');
+            return redirect(route('admin.locations.index'));
         }
 
-        $event->update($request->except(['_token', 'categories']));
-        $event->categories()->sync($request->categories);
+        $location->update($request->except(['_token']));
 
-        $request->session()->flash('success', 'Uspješno ste uredili podatke o događaju');
+        $request->session()->flash('success', 'Uspješno ste uredili podatke o lokaciji');
 
-        return redirect(route('admin.events.index'));
+        return redirect(route('admin.locations.index'));
     }
 
     /**
@@ -122,10 +105,10 @@ class AdminEventController extends Controller
      */
     public function destroy($id, Request $request)
     {
-        Event::destroy($id);
+        Location::destroy($id);
 
-        $request->session()->flash('success', 'Uspješno ste obrisali događaj');
+        $request->session()->flash('success', 'Uspješno ste obrisali lokaciju');
 
-        return redirect(route('admin.events.index'));
+        return redirect(route('admin.locations.index'));
     }
 }

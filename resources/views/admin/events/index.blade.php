@@ -23,6 +23,8 @@
                 <th scope="col">Opis</th>
                 <th scope="col">Datum</th>
                 <th scope="col">Kategorije</th>
+                <th scope="col">Organizator</th>
+                <th scope="col">Lokacija</th>
                 <th scope="col" class="text-end">Operacije</th>
                 </tr>
             </thead>
@@ -35,6 +37,8 @@
                 <td>{{ $event->date }}</td>
                 <td>@foreach($event->categories as $category){{ $category->name}}@if ( !($loop->last) ),@endif
                     @endforeach</td>
+                <td>{{ $event->organizer->name }}</td>
+                <td>{{ $event->location->name }}</td>
                 <td class="text-end">
                     <a class="btn btn-sm btn-primary" href="{{ route('admin.events.edit', $event->id) }}" role="button">
                         <i class="fa fa-edit" aria-hidden="true"></i>
