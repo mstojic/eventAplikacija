@@ -48,10 +48,9 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li class="nav-item"><a href="/">Naslovnica</a></li>
-              <!--<li><a href="/category">Kategorije</a></li> -->
-              <li class="nav-item"><a href="/listing">Događaji</a></li>
-              <li class="nav-item"><a href="/contact">Kontakt</a></li>
               <li class="nav-item"><a href="/category">Kategorije</a></li>
+              <li class="nav-item"><a href="{{ route('listing') }}">Događaji</a></li>
+              <li class="nav-item"><a href="/contact">Kontakt</a></li>
               @auth
               <li class="nav-button">
               <div class="dropdown main-white-button">
@@ -61,7 +60,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 @can('is-admin')<li><a class="dropdown-item" href="/admin/users">Administracija</a></li>@endcan
                 @can('is-organizer')<li><a class="dropdown-item" href="/organizer/events">Vaši događaji</a></li>@endcan
-                    <li><a class="dropdown-item" href="/user/events/">Rezervirani događaji</a></li>
+                @can('is-user')<li><a class="dropdown-item" href="/user/events/">Rezervirani događaji</a></li>@endcan
                     <li><a class="dropdown-item" href="/user/profile">Profil</a></li>
                 </ul>
               </div>

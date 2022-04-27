@@ -12,22 +12,22 @@
           </div>
         </div>
         <div class="col-lg-12">
-          <form id="search-form" name="gs" method="submit" role="search" action="#">
+          <form id="search-form" name="gs" method="submit" role="search" action="{{ route('search') }}">
             <div class="row">
               <div class="col-lg-3 align-self-center">
                 <fieldset>
-                  <select name="area" class="form-select" aria-label="Area" id="chooseCategory"
+                  <select name="location" class="form-select" aria-label="Area" id="chooseCategory"
                     onchange="this.form.click()">
-                    <option selected>Sva mjesta</option>
+                    <option value=null selected>Sva mjesta</option>
                         @foreach($locations as $location)
-                            <option value="New Village">{{ $location->name }}</option>
+                            <option value="{{$location->id}}">{{ $location->name }}</option>
                         @endforeach
                   </select>
                 </fieldset>
               </div>
               <div class="col-lg-3 align-self-center">
                 <fieldset>
-                  <input type="address" name="address" class="searchText" placeholder="Upišite lokaciju"
+                  <input type="text" name="searchtext" class="searchText" placeholder="Upišite ime događaja"
                     autocomplete="on" required>
                 </fieldset>
               </div>
@@ -35,11 +35,11 @@
                 <fieldset>
                   <select name="price" class="form-select" aria-label="Default select example" id="chooseCategory"
                     onchange="this.form.click()">
-                    <option selected>Cjenovni Rang</option>
-                    <option value="$100 - $250">$100 - $250</option>
-                    <option value="$250 - $500">$250 - $500</option>
-                    <option value="$500 - $1000">$500 - $1,000</option>
-                    <option value="$1000+">$1,000 ili više</option>
+                    <option value= "any-price" selected>Cjenovni Rang</option>
+                    <option value="250">$100 - $250</option>
+                    <option value="500">$250 - $500</option>
+                    <option value="1000">$500 - $1,000</option>
+                    <option value="1001">$1,000 ili više</option>
                   </select>
                 </fieldset>
               </div>
@@ -53,16 +53,22 @@
         </div>
         <div class="col-lg-10 offset-lg-1">
           <ul class="categories">
-            <li><a href="category"><span class="icon"><img src="assets/images/search-icon-01.png"
-                    alt="Home"></span> Koncerti</a></li>
-            <li><a href="listing"><span class="icon"><img src="assets/images/search-icon-02.png" alt="Food"></span>
+              @foreach($categories as $category)
+              <li><a href="{{ route('listing', $category->id) }}"><span class="icon"><img src="assets/images/search-icon-01.png" alt="Home"></span>
+                {{ $category->name }}</a></li>
+              @endforeach
+
+            <!--
+            <li><a href=""><span class="icon"><img src="assets/images/search-icon-01.png" alt="Home"></span>
+                Koncerti</a></li>
+            <li><a href=""><span class="icon"><img src="assets/images/search-icon-02.png" alt="Food"></span>
                 Hrana</a></li>
             <li><a href="#"><span class="icon"><img src="assets/images/search-icon-03.png" alt="Vehicle"></span>
                 Sport</a></li>
             <li><a href="#"><span class="icon"><img src="assets/images/search-icon-04.png" alt="Shopping"></span>
                 Kupovina</a></li>
             <li><a href="#"><span class="icon"><img src="assets/images/search-icon-05.png" alt="Travel"></span>
-                Konferencije</a></li>
+                Konferencije</a></li> -->
           </ul>
         </div>
       </div>

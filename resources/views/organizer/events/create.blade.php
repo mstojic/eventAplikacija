@@ -22,7 +22,13 @@
             <div class="row">
               <div class="col-lg-6">
                 <div id="eventImg">
-                    <input type="file" name="image" class="form-control">
+                    <div class="wrapper">
+                        <div class="file-upload">
+                          <input type="file" />
+                          <i class="fa fa-arrow-up"></i>
+                        </div>
+                      </div>
+                    <!--<input type="file" name="image" class="form-control"> -->
 
                 </div>
               </div>
@@ -60,12 +66,12 @@
                     <div class="col-lg-12">
                         <fieldset>
                             <div class="dropdown">
-                                <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="form-select form-select-category" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     Kategorije
-                                </button>
-                                <ul class="dropdown-menu form-categories" aria-labelledby="dropdownMenuButton1">
+                                </div>
+                                <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenuButton1">
                                   @foreach ($categories as  $category)
-                                    <li><input type="checkbox" name="categories[]" value={{ $category->id }} /> {{ $category->name }} </li>
+                                    <li class="dropdown-item"><label><input type="checkbox" name="categories[]" value={{ $category->id }} /> {{ $category->name }} </label></li>
                                   @endforeach
                                 </ul>
                               </div>

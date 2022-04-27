@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Models\Event;
 use App\Models\Location;
 use App\Models\Category;
+use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
@@ -20,19 +21,21 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('index', ['events' => Event::latest()->paginate(3)], ['locations' => Location::all()]);
+        return view('index',
+        [
+            'events' => Event::latest()->paginate(3),
+            'locations' => Location::all(),
+            'categories' => Category::all()
+        ]);
     }
 
-    public function listing()
+    /*public function listing()
     {
         return view('listing', ['events' => Event::all()], ['categories' => Category::all()]);
-    }
+    }*/
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function create()
     {
         //
@@ -94,6 +97,13 @@ class EventController extends Controller
         //
     }
 
+    /**
+     * Display data about event.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function details($id)
     {
         return view('details',
@@ -104,10 +114,56 @@ class EventController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Display list of events sorted by category.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function listing($id = null)
+    {
+        if($id == null) {
+            $id = Category::first()->id;
+        }
+
+            return view('listing',
+            [
+                'events' => Event::all(),
+                'categories' => Category::all(),
+                'category_link' => Category::find($id)
+            ]);
+
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->searchtext;
+        $location = $request->location;
+        $price = $request->price;
+
+        //dd($request->location);
+
+        $events = Event::query()
+        ->where('name', 'LIKE', "%{$search}%")
+        ->get();
+
+        if($location != null){
+            $events->where('location_id', 'LIKE', "%{$location}%");
+        }
+
+        if($price != null){
+            $events->where('price', '<=', $price);
+        }
+
+
+        return view('search',
+        [
+            'events' => $events,
+            'categories' => Category::all(),
+            'locations' => Location::all(),
+            'search' => $search
+        ]);
+    }
+
+
 }

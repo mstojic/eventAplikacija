@@ -32,9 +32,11 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/listing', 'EventController@listing');
+Route::get('/listing/{id?}', 'EventController@listing')->name('listing');
 
 Route::get('/details/{id}', 'EventController@details')->name('details');
+
+Route::get('/search', 'EventController@search')->name('search');
 
 Route::prefix('organizer')->middleware(['auth', 'auth.isOrganizer', 'verified'])->name('organizer.')->group(function(){
     Route::resource('/events', OrganizerEventController::class);

@@ -24,13 +24,13 @@
                 <div class="col-lg-3">
                   <div class="menu">
                     @foreach($categories as $category)
-                        @if($loop->first)
-                            <div id={{ $category->name }} class="first-thumb active">
+                        @if($category == $category_link)
+                            <div id={{ $category_link->name }} class="first-thumb active">
                         @else
                             <div id={{ $category->name }} class="first-thumb">
                         @endif
                                 <div class="thumb">
-                                    <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
+                                    <span class="icon"><img src="/assets/images/search-icon-01.png" alt=""></span>
                                     {{ $category->name }}
                                 </div>
                             </div>
@@ -41,7 +41,7 @@
                   <ul class="nacc">
                       @foreach($categories as $category)
                     <!-- first category listing of items -->
-                    @if($loop->first)
+                    @if($category == $category_link)
                     <li class="active">
                     @else
                     <li class="">
@@ -52,7 +52,7 @@
 
                             @foreach($events as $event)
                                 @foreach ($event->categories as $event_category )
-                                    @if ($event_category->name == $category->name)
+                                    @if ($event_category->id == $category->id)
                                     <div class="item">
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -71,12 +71,12 @@
                                             </a>
                                             <h6>Organizator: {{ $event->organizer->name }}</h6>
                                             <span class="price">
-                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>
+                                                <div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div>
                                                 {{ $event->price }} KM
                                             </span>
                                             <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(35) }}</em></span>
-                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2
-                                                Sobe<br><img src="assets/images/listing-icon-03.png" alt=""> 3
+                                            <span class="info"><img src="/assets/images/listing-icon-02.png" alt=""> 2
+                                                Sobe<br><img src="/assets/images/listing-icon-03.png" alt=""> 3
                                                 Kupatila</span>
                                             </div>
                                         </div>

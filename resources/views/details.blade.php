@@ -53,6 +53,7 @@
                       </ul>
 
                      @auth
+                     @can('is-user')
                      @if($event->organizer_id != $user->id)
                      @if($event->users->contains('id', $user->id))
                       <div class="main-white-button details-main-button-cancel">
@@ -73,6 +74,7 @@
                       </form>
                     @endif
                     @endif
+                    @endcan
                     @endauth
 
                     @guest
