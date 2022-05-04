@@ -18,7 +18,7 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->string('price');
+            $table->integer('price');
             $table->string('date');
             $table->string('image')->default('/assets/images/listing-01.jpg');
             $table->unsignedBigInteger('organizer_id');

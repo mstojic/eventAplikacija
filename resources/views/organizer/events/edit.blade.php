@@ -22,12 +22,17 @@
             <div class="row">
               <div class="col-lg-6">
                 <div id="eventImg">
-                    <input type="file" name="image" class="form-control">
-
+                    <div class="wrapper">
+                        <div class="file-upload">
+                            <input form="contact" type="file" name="image" />
+                            <i class="fa fa-arrow-up"></i>
+                        </div>
+                        </div>
+                    <!--<input type="file" name="image" class="form-control"> -->
                 </div>
               </div>
               <div class="col-lg-6 align-self-center">
-                <form id="contact" method="POST" action="{{ route('organizer.events.update', $event->id) }}">
+                <form id="contact" method="POST" action="{{ route('organizer.events.update', $event->id) }}" enctype="multipart/form-data">
                 @method('PATCH')
                 @csrf
                   <div class="row">
@@ -60,11 +65,16 @@
                       </div>
                     <div class="col-lg-12">
                         <fieldset>
-                            <ul class="form-categories">
-                                @foreach ($categories as  $category)
-                                <li><input type="checkbox" name="categories[]" value={{ $category->id }} @if(in_array($category->id, $event->categories->pluck('id')->toArray())) checked @endif /> {{ $category->name }}</li>
-                                @endforeach
-                            </ul>
+                            <div class="dropdown">
+                                <div class="form-select form-select-category" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Kategorije
+                                </div>
+                                <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenuButton1">
+                                  @foreach ($categories as  $category)
+                                    <li class="dropdown-item"><label><input type="checkbox" name="categories[]" value={{ $category->id }} /> {{ $category->name }} </label></li>
+                                  @endforeach
+                                </ul>
+                              </div>
                         </fieldset>
                       <fieldset>
                         <textarea name="description" type="text" class="form-control" id="description" placeholder="Detalji"

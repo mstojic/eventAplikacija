@@ -139,22 +139,25 @@ class EventController extends Controller
     {
         $search = $request->searchtext;
         $location = $request->location;
-        $price = $request->price;
+        $price = (int)$request->price;
+
+        //dd(gettype($price));
 
         //dd($request->location);
 
-        $events = Event::query()
-        ->where('name', 'LIKE', "%{$search}%")
-        ->get();
+        $events = Event::query()->where('name', 'LIKE', "%{$search}%");
 
-        if($location != null){
+        if($location != 'null'){
             $events->where('location_id', 'LIKE', "%{$location}%");
         }
 
         if($price != null){
-            $events->where('price', '<=', $price);
+            $events
+            ->having("price", "<", $price)
+            ->having("price", ">", $price/2);
         }
 
+        $events=$events->get();
 
         return view('search',
         [

@@ -35,11 +35,10 @@
                 <fieldset>
                   <select name="price" class="form-select" aria-label="Default select example" id="chooseCategory"
                     onchange="this.form.click()">
-                    <option value= "any-price" selected>Cjenovni Rang</option>
-                    <option value="250">$100 - $250</option>
+                    <option value=null selected>Cjenovni Rang</option>
+                    <option value="250">$125 - $250</option>
                     <option value="500">$250 - $500</option>
                     <option value="1000">$500 - $1,000</option>
-                    <option value="1001">$1,000 ili više</option>
                   </select>
                 </fieldset>
               </div>

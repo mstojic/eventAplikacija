@@ -24,17 +24,16 @@
                 <div id="eventImg">
                     <div class="wrapper">
                         <div class="file-upload">
-                          <input type="file" />
+                          <input form="contact" type="file" name="image" />
                           <i class="fa fa-arrow-up"></i>
                         </div>
-                      </div>
-                    <!--<input type="file" name="image" class="form-control"> -->
-
+                    </div>
                 </div>
               </div>
               <div class="col-lg-6 align-self-center">
-                <form id="contact" method="POST" action="{{ route('organizer.events.store') }}">
+                <form id="contact" method="POST" action="{{ route('organizer.events.store') }}" enctype="multipart/form-data">
                 @csrf
+                <!--<input type="file" name="image" class="form-control">-->
                   <div class="row">
                     <div class="col-lg-6">
                       <fieldset>

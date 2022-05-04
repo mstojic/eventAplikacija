@@ -1015,6 +1015,11 @@ Recent Listing
   margin-bottom: 30px;
 }
 
+.left-image {
+    max-width: 500px;
+    max-height: 380px;
+}
+
 .recent-listing .item .left-image {
   float: left;
   overflow: hidden;

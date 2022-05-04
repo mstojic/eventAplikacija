@@ -56,7 +56,22 @@ class OrganizerEventController extends Controller
      */
     public function store(Request $request)
     {
-        $event = Event::create(array_merge($request->all(), ['organizer_id' =>  auth()->user()->id]));
+
+        $validatedData = $request->validate([
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
+
+           ]);
+
+        $request->file('image')->store('public/event_images');
+
+        $path = "/storage/event_images/" . $request->image->hashName();
+
+        $event = Event::create(array_merge($request->except('image'), [
+            'organizer_id' =>  auth()->user()->id,
+            'image' => $path
+        ]));
+
+
 
         $event->categories()->sync($request->categories);
 
@@ -103,12 +118,21 @@ class OrganizerEventController extends Controller
     {
         $event = Event::find($id);
 
-        if(!$event) {
+       if(!$event) {
             $request->session()->flash('error', 'Ne možete urediti podatke o ovom događaju.');
             return redirect(route('organizer.events.index'));
         }
 
-        $event->update($request->except(['_token', 'categories']));
+
+        if($request->hasFile('image')){
+            unlink(public_path(). '/'. $event->image);
+            $request->file('image')->store('public/event_images');
+            $path = "/storage/event_images/" . $request->image->hashName();
+            $event->image = $path;
+        }
+
+        $event->update($request->except(['_token', 'categories', 'image']));
+
         $event->categories()->sync($request->categories);
 
         $request->session()->flash('success', 'Uspješno ste uredili podatke o događaju.');
@@ -124,6 +148,7 @@ class OrganizerEventController extends Controller
      */
     public function destroy($id, Request $request)
     {
+        unlink(public_path(). '/'. Event::find($id)->image);
         Event::destroy($id);
 
         $request->session()->flash('success', 'Uspješno ste obrisali događaj.');
