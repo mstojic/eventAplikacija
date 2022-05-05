@@ -30,7 +30,7 @@
                             <div id={{ $category->name }} class="first-thumb">
                         @endif
                                 <div class="thumb">
-                                    <span class="icon"><img src="/assets/images/search-icon-01.png" alt=""></span>
+                                    <span class="icon"><img src="{{$category->icon}}" alt=""></span>
                                     {{ $category->name }}
                                 </div>
                             </div>
@@ -75,9 +75,9 @@
                                                 {{ $event->price }} KM
                                             </span>
                                             <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(35) }}</em></span>
-                                            <span class="info"><img src="/assets/images/listing-icon-02.png" alt=""> 2
-                                                Sobe<br><img src="/assets/images/listing-icon-03.png" alt=""> 3
-                                                Kupatila</span>
+                                            <span class="info">
+                                                <img src="/assets/images/listing-icon-02.png" alt=""> Broj prijava: {{ $event->users->count()}}<br>
+                                                <!-- <img src="/assets/images/listing-icon-03.png" alt=""> 3 Kupatila</span> -->
                                             </div>
                                         </div>
                                         </div>

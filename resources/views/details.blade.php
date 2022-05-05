@@ -47,9 +47,10 @@
                       <span class="details">Kategorije: <em>@foreach($event->categories as $category){{ $category->name}}@if ( !($loop->last) ),@endif
                                                             @endforeach</em></span>
                       <span class="details">Lokacija: <em>{{ $event->location->name}}</em></span>
+
                       <ul class="info">
-                        <li><img src="/assets/images/listing-icon-02.png" alt=""> 4 Soba</li>
-                        <li><img src="/assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li>
+                        <li><img src="/assets/images/listing-icon-02.png" alt=""> Broj prijava: {{ $event->users->count()}}</li>
+                        <!-- <li><img src="/assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li> -->
                       </ul>
 
                      @auth

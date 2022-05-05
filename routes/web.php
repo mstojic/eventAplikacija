@@ -24,10 +24,6 @@ use User\ReservedEventController;
 
 Route::get('/', 'EventController@index');
 
-Route::get('/category', function () {
-    return view('category');
-});
-
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -37,6 +33,8 @@ Route::get('/listing/{id?}', 'EventController@listing')->name('listing');
 Route::get('/details/{id}', 'EventController@details')->name('details');
 
 Route::get('/search', 'EventController@search')->name('search');
+
+Route::get('/category', 'EventController@category')->name('category');
 
 Route::prefix('organizer')->middleware(['auth', 'auth.isOrganizer', 'verified'])->name('organizer.')->group(function(){
     Route::resource('/events', OrganizerEventController::class);

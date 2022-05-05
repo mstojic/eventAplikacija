@@ -52,8 +52,8 @@
         </div>
         <div class="col-lg-10 offset-lg-1">
           <ul class="categories">
-              @foreach($categories as $category)
-              <li><a href="{{ route('listing', $category->id) }}"><span class="icon"><img src="assets/images/search-icon-01.png" alt="Home"></span>
+              @foreach($categories->take(5) as $category)
+              <li><a href="{{ route('listing', $category->id) }}"><span class="icon"><img src="{{$category->icon}}" alt="Home"></span>
                 {{ $category->name }}</a></li>
               @endforeach
 
@@ -280,8 +280,8 @@
                       </span>
                       <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(50) }}</em></span>
                       <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> 4 Soba</li>
-                        <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li>
+                        <li><img src="assets/images/listing-icon-02.png" alt=""> Broj prijava: {{ $event->users->count()}}</li>
+                        <!-- <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li> -->
                       </ul>
                       <div class="main-white-button">
                         <a href="contact"><i class="fa fa-eye"></i> Kontakt</a>

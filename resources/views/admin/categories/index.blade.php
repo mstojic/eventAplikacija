@@ -20,6 +20,7 @@
                 <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Naziv</th>
+                <th scope="col">Opis</th>
                 <th scope="col" class="text-end">Operacije</th>
                 </tr>
             </thead>
@@ -28,6 +29,7 @@
                 <tr>
                 <th scope="row">{{ $category->id }}</th>
                 <td>{{ $category->name }}</td>
+                <td>{{ $category->description }}</td>
                 <td class="text-end">
                     <a class="btn btn-sm btn-primary" href="{{ route('admin.categories.edit', $category->id) }}" role="button">
                         <i class="fa fa-edit" aria-hidden="true"></i>

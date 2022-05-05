@@ -60,10 +60,8 @@
                                             </span>
                                             <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(70) }}</em></span>
                                             <span class="info">
-                                                <img src="/assets/images/listing-icon-02.png" alt=""> 2 Sobe<br>
-                                                <img src="/assets/images/listing-icon-03.png" alt=""> 3 Kupatila
-
-                                            </span><br>
+                                                <img src="/assets/images/listing-icon-02.png" alt=""> Broj prijava: {{ $event->users->count()}}<br>
+                                                <!-- <img src="/assets/images/listing-icon-03.png" alt=""> 3 Kupatila </span><br> -->
 
                                             <form id="delete-event-form-{{ $event->id }}" action="{{ route('organizer.events.destroy', $event->id) }}" method="POST" style="display: none">
                                                 @csrf

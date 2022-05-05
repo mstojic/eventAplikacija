@@ -11,6 +11,7 @@ use App\Models\Event;
 use App\Models\Location;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class EventController extends Controller
 {
@@ -133,6 +134,17 @@ class EventController extends Controller
                 'category_link' => Category::find($id)
             ]);
 
+    }
+
+    public function category()
+    {
+        return view('category',
+        [
+            'categories' => Category::all(),
+            'events_year' => Event::whereYear('date', date('Y'))->get(),
+            'events_month' => Event::whereMonth('date', date('m'))->get(),
+            'events_week' => Event::whereBetween('date', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])->get()
+        ]);
     }
 
     public function search(Request $request)

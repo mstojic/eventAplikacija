@@ -21,10 +21,10 @@
           <div class="inner-content">
             <div class="row">
               <div class="col-lg-6">
-                <div id="eventImg">
+                <div id="eventImg" style="background-image: url('{{$event->image}}')">
                     <div class="wrapper">
                         <div class="file-upload">
-                            <input form="contact" type="file" name="image" />
+                            <input form="contact" type="file" name="image" class="organizer-image-input" />
                             <i class="fa fa-arrow-up"></i>
                         </div>
                         </div>
@@ -32,7 +32,7 @@
                 </div>
               </div>
               <div class="col-lg-6 align-self-center">
-                <form id="contact" method="POST" action="{{ route('organizer.events.update', $event->id) }}" enctype="multipart/form-data">
+                <form id="contact" class="organizer-form-data" method="POST" action="{{ route('organizer.events.update', $event->id) }}" enctype="multipart/form-data">
                 @method('PATCH')
                 @csrf
                   <div class="row">

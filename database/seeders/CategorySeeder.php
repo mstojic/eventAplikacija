@@ -16,23 +16,33 @@ class CategorySeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            'name' => 'Koncerti'
+            'name' => 'Koncerti',
+            'icon'=> '/assets/images/search-icon-01.png',
+            'description' => 'Opis kategorije Koncerti'
         ]);
 
         DB::table('categories')->insert([
-            'name' => 'Hrana'
+            'name' => 'Hrana',
+            'icon' => '/assets/images/search-icon-02.png',
+            'description' => 'Opis kategorije Hrana'
         ]);
 
         DB::table('categories')->insert([
-            'name' => 'Sport'
+            'name' => 'Sport',
+            'icon' => '/assets/images/search-icon-03.png',
+            'description' => 'Opis kategorije Sport'
         ]);
 
         DB::table('categories')->insert([
-            'name' => 'Kupovina'
+            'name' => 'Kupovina',
+            'icon' => '/assets/images/search-icon-04.png',
+            'description' => 'Opis kategorije Kupovina'
         ]);
 
         DB::table('categories')->insert([
-            'name' => 'Konferencije'
+            'name' => 'Konferencije',
+            'icon' => '/assets/images/search-icon-05.png',
+            'description' => 'Opis kategorije Konferencije'
         ]);
     }
 }

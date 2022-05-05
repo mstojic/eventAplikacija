@@ -61,7 +61,7 @@
                 @can('is-admin')<li><a class="dropdown-item" href="/admin/users">Administracija</a></li>@endcan
                 @can('is-organizer')<li><a class="dropdown-item" href="/organizer/events">Vaši događaji</a></li>@endcan
                 @can('is-user')<li><a class="dropdown-item" href="/user/events/">Rezervirani događaji</a></li>@endcan
-                    <li><a class="dropdown-item" href="/user/profile">Profil</a></li>
+                    <li><a class="dropdown-item mb-2" href="/user/profile">Profil</a></li>
                 </ul>
               </div>
               </li>
