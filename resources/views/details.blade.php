@@ -41,15 +41,15 @@
                       </ul> -->
                       <span class="price">
                         <div class="icon"><img src="/assets/images/listing-icon-01.png" alt=""></div> {{ $event->price }} KM
-
                       </span>
                       <span class="details">Detalji: <em>{{ $event->description }}</em></span>
-                      <span class="details">Kategorije: <em>@foreach($event->categories as $category){{ $category->name}}@if ( !($loop->last) ),@endif
+                      <span class="details"><i class="fa fa-clock-o icon-event"></i>Datum: <em>{{ date('d.m.Y H:i', strtotime($event->date)) }}</em></span>
+                      <span class="details"><i class="fa fa-list-alt icon-event"></i>Kategorije: <em>@foreach($event->categories as $category){{ $category->name}}@if ( !($loop->last) ),@endif
                                                             @endforeach</em></span>
-                      <span class="details">Lokacija: <em>{{ $event->location->name}}</em></span>
+                      <span class="details"><i class="fa fa-map-marker icon-event"></i>Lokacija: <em>{{ $event->location->name}}</em></span>
 
                       <ul class="info">
-                        <li><img src="/assets/images/listing-icon-02.png" alt=""> Broj prijava: {{ $event->users->count()}}</li>
+                        <li><i class="fa fa-ticket icon-event"></i> Broj prijava: {{ $event->users->count()}}</li>
                         <!-- <li><img src="/assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li> -->
                       </ul>
 

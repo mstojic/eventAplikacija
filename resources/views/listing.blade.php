@@ -35,7 +35,8 @@
                                 </div>
                             </div>
                     @endforeach
-                  </div>
+
+                    </div>
                 </div>
                 <div class="col-lg-9">
                   <ul class="nacc">
@@ -49,12 +50,16 @@
                       <div>
                         <div class="col-lg-12">
                           <div class="owl-carousel owl-listing">
-
+                            <?php $counter = 1; ?>
                             @foreach($events as $event)
                                 @foreach ($event->categories as $event_category )
                                     @if ($event_category->id == $category->id)
-                                    <div class="item">
-                                    <div class="row">
+
+                                    @if($counter == 1)
+                                        <div class="item">
+                                        <div class="row">
+                                    @endif
+
                                         <div class="col-lg-12">
                                         <div class="listing-item">
                                             <div class="left-image">
@@ -76,13 +81,20 @@
                                             </span>
                                             <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(35) }}</em></span>
                                             <span class="info">
-                                                <img src="/assets/images/listing-icon-02.png" alt=""> Broj prijava: {{ $event->users->count()}}<br>
-                                                <!-- <img src="/assets/images/listing-icon-03.png" alt=""> 3 Kupatila</span> -->
+                                                <i class="fa fa-ticket icon-event"></i> Broj prijava: {{ $event->users->count()}}<br>
+                                                <i class="fa fa-clock-o icon-event"></i> Datum: {{ date('d.m.Y H:i', strtotime($event->date)) }}</span>
                                             </div>
                                         </div>
                                         </div>
-                                    </div>
-                                    </div>
+
+                                    @if($counter % 3 == 0)
+                                        </div>
+                                        </div>
+                                        <?php $counter = 1; ?>
+                                    @else
+                                        <?php $counter++; ?>
+                                    @endif
+
                                     @endif
                                 @endforeach
                             @endforeach
@@ -104,5 +116,6 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 @stop

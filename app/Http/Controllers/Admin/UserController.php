@@ -25,7 +25,10 @@ class UserController extends Controller
         }
 
         if(Gate::allows('is-admin')){
-            return view('admin.users.index', ['users' => User::paginate(10)]);
+            return view('admin.users.index', [
+                'users' => User::paginate(10),
+                'roles' => Role::all()
+            ]);
         }
 
         dd('you need to be admin');

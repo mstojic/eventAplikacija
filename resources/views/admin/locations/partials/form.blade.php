@@ -2,23 +2,23 @@
 
             <!-- Name -->
             <div>
-                <x-label for="name" :value="__('Naziv')" />
+                <x-form-label for="name" :value="__('Naziv')" />
 
                 @if(@isset($location))
-                    <x-input id="name" class="block mt-1 w-full" type="text" name="name" value="{{ $location->name }}" required autofocus />
+                    <x-form-input id="name" class="block mt-1 w-full" type="text" name="name" value="{{ $location->name }}" required autofocus />
                 @else
-                    <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                    <x-form-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
                 @endif
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 @if(@isset($create))
-                    <x-button class="ml-4">
+                    <x-form-button class="ml-4">
                         {{ __('Kreirajte novu lokaciju') }}
-                    </x-button>
+                    </x-form-button>
                 @else
-                    <x-button class="ml-4">
+                    <x-form-button class="ml-4">
                         {{ __('Uredite podatke o lokaciji') }}
-                    </x-button>
+                    </x-form-button>
                 @endif
             </div>

@@ -12,7 +12,7 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
         <p class="form-heading">Uređivanje podataka kategorije<p>
-        <form method="POST" action="{{ route('admin.categories.update', $category->id) }}">
+        <form method="POST" action="{{ route('admin.categories.update', $category->id) }}" enctype="multipart/form-data">
             @method('PATCH')
             @include('admin.categories.partials.form')
         </form>

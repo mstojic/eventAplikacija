@@ -45,7 +45,18 @@ class AdminCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $category =  Category::create($request->all());
+        $validatedData = $request->validate([
+            'icon' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
+
+           ]);
+
+        $request->file('icon')->store('public/category_icons');
+
+        $path = "/storage/category_icons/" . $request->icon->hashName();
+
+        $category = Category::create(array_merge($request->except('icon'), [
+            'icon' => $path
+        ]));
 
         $request->session()->flash('success', 'Uspješno ste kreirali novu kategoriju');
 
@@ -90,7 +101,14 @@ class AdminCategoryController extends Controller
             return redirect(route('admin.categories.index'));
         }
 
-        $category->update($request->except(['_token']));
+        if($request->hasFile('icon')){
+            unlink(public_path(). '/'. $category->icon);
+            $request->file('icon')->store('public/category_icons');
+            $path = "/storage/category_icons/" . $request->icon->hashName();
+            $category->icon = $path;
+        }
+
+        $category->update($request->except(['_token', 'icon']));
 
         $request->session()->flash('success', 'Uspješno ste uredili podatke o kategoriji');
 
@@ -105,6 +123,8 @@ class AdminCategoryController extends Controller
      */
     public function destroy($id, Request $request)
     {
+        unlink(public_path(). '/'. Category::find($id)->icon);
+
         Category::destroy($id);
 
         $request->session()->flash('success', 'Uspješno ste obrisali događaj');

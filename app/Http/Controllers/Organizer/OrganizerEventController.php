@@ -56,7 +56,6 @@ class OrganizerEventController extends Controller
      */
     public function store(Request $request)
     {
-
         $validatedData = $request->validate([
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
 
@@ -70,8 +69,6 @@ class OrganizerEventController extends Controller
             'organizer_id' =>  auth()->user()->id,
             'image' => $path
         ]));
-
-
 
         $event->categories()->sync($request->categories);
 
@@ -118,11 +115,10 @@ class OrganizerEventController extends Controller
     {
         $event = Event::find($id);
 
-       if(!$event) {
+        if(!$event) {
             $request->session()->flash('error', 'Ne možete urediti podatke o ovom događaju.');
             return redirect(route('organizer.events.index'));
         }
-
 
         if($request->hasFile('image')){
             unlink(public_path(). '/'. $event->image);
@@ -149,6 +145,7 @@ class OrganizerEventController extends Controller
     public function destroy($id, Request $request)
     {
         unlink(public_path(). '/'. Event::find($id)->image);
+
         Event::destroy($id);
 
         $request->session()->flash('success', 'Uspješno ste obrisali događaj.');

@@ -97,8 +97,8 @@
                                         <?php $week++; ?>
                                         @endif
                                     @endforeach
-                                    <span class="list-item">Ovaj Tjedan: {{$week}} Oglasa &amp; 150 Prodaja<br>Ovaj Mjesec: {{$month}}
-                                      Oglasa &amp; 1,560 Prodaja<br>Ove Godine: {{$year}} Oglasa &amp; 14,000 Prodaja</span>
+                                    <span class="list-item">Ovaj Tjedan: {{$week}} Oglasa<br>Ovaj Mjesec: {{$month}}
+                                      Oglasa<br>Ove Godine: {{$year}} Oglasa</span>
 
                                   </div>
                                 </div>

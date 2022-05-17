@@ -132,7 +132,7 @@
                               <div class="left-text">
                                 <h4>Raznovrsni koncerti svuda oko vas!</h4>
                                 <p>Opis kateogrije</p>
-                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Saznajte više</a>
+                                <div class="main-white-button"><a href="/category"><i class="fa fa-eye"></i> Saznajte više</a>
                                 </div>
                               </div>
                             </div>
@@ -153,7 +153,7 @@
                               <div class="left-text">
                                 <h4>Restorani u vašoj blizini!</h4>
                                 <p>Opis kategorije</p>
-                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Saznajte više</a>
+                                <div class="main-white-button"><a href="/category"><i class="fa fa-eye"></i> Saznajte više</a>
                                 </div>
                               </div>
                             </div>
@@ -174,7 +174,7 @@
                               <div class="left-text">
                                 <h4>Aktualna sportska događanja!</h4>
                                 <p>Opis kategorije</p>
-                                <div class="main-white-button"><a href="listing"><i class="fa fa-eye"></i> Saznajte više
+                                <div class="main-white-button"><a href="/category"><i class="fa fa-eye"></i> Saznajte više
                                     </a></div>
                               </div>
                             </div>
@@ -195,7 +195,7 @@
                               <div class="left-text">
                                 <h4>Posjetite trgovine u svojoj blizini!</h4>
                                 <p>Opis proizvoda</p>
-                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Saznajte više</a>
+                                <div class="main-white-button"><a href="/category"><i class="fa fa-eye"></i> Saznajte više</a>
                                 </div>
                               </div>
                             </div>
@@ -217,8 +217,7 @@
                                 <h4>Razne konfrencije u vašoj blizini!</h4>
                                 <p>Opis proizvoda
                                 </p>
-                                <div class="main-white-button"><a rel="nofollow"
-                                    href="https://templatemo.com/contact"><i class="fa fa-eye"></i> Saznajte više</a></div>
+                                <div class="main-white-button"><a href="/category"><i class="fa fa-eye"></i> Saznajte više</a></div>
                               </div>
                             </div>
                             <div class="col-lg-7 align-self-center">
@@ -280,7 +279,8 @@
                       </span>
                       <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(50) }}</em></span>
                       <ul class="info">
-                        <li><img src="assets/images/listing-icon-02.png" alt=""> Broj prijava: {{ $event->users->count()}}</li>
+                        <i class="fa fa-ticket icon-event"></i> Broj prijava: {{ $event->users->count()}}<br>
+                        <i class="fa fa-clock-o icon-event"></i> Datum: {{ date('d.m.Y H:i', strtotime($event->date)) }}</span>
                         <!-- <li><img src="assets/images/listing-icon-03.png" alt=""> 4 Kupatila</li> -->
                       </ul>
                       <div class="main-white-button">

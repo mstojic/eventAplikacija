@@ -24,7 +24,12 @@ class AdminEventController extends Controller
         }
 
         if(Gate::allows('is-admin')){
-            return view('admin.events.index', ['events' => Event::paginate(10)]);
+            return view('admin.events.index', [
+                'events' => Event::paginate(10),
+                'categories' => Category::all(),
+                'organizers' => User::all(),
+                'locations' => Location::all()
+            ]);
         }
 
         dd('you need to be admin');

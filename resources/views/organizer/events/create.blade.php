@@ -24,7 +24,7 @@
                 <div id="eventImg">
                     <div class="wrapper">
                         <div class="file-upload">
-                          <input form="contact" type="file" name="image" class="organizer-image-input" />
+                          <input form="contact" type="file" name="image" id="image" class="organizer-image-input"  required/>
                           <i class="fa fa-arrow-up"></i>
                         </div>
                     </div>
@@ -33,7 +33,6 @@
               <div class="col-lg-6 align-self-center">
                 <form id="contact" class="organizer-form-data" method="POST" action="{{ route('organizer.events.store') }}" enctype="multipart/form-data">
                 @csrf
-                <!--<input type="file" name="image" class="form-control">-->
                   <div class="row">
                     <div class="col-lg-6">
                       <fieldset>
@@ -58,7 +57,7 @@
                     </div>
                     <div class="col-lg-6">
                         <fieldset>
-                          <input type="date" name="date" id="date" placeholder="Datum"
+                          <input type="datetime-local" name="date" id="date" placeholder="Datum"
                             required="">
                         </fieldset>
                       </div>
@@ -95,4 +94,32 @@
       </div>
     </div>
   </div>
+
+<!-- Skripta za preview slike koja je odabrana. -->
+<script>
+    image.onchange = evt => {
+        const [file] = image.files
+        if (file) {
+        let str = URL.createObjectURL(file);
+        eventImg.style.backgroundImage ="url(" + str + ")";
+        }
+    }
+</script>
+
+<!-- Skripta za postavljanje minimalnog datuma (moguće je odabrati datum tjedan dana od današnjeg dana, pa nadalje). -->
+<script>
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //Siječanj je jednak nuli, stoga dodajemo 1 kako bi postao prvi mjesec.
+    var yyyy = today.getFullYear();
+    if(dd<10){
+    dd='0'+dd
+    }
+    if(mm<10){
+    mm='0'+mm
+    }
+
+    today = yyyy+'-'+mm+'-'+dd +"T00:00:00";
+    document.getElementById("date").setAttribute("min", today);
+</script>
 @stop

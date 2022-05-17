@@ -8,9 +8,10 @@
     <div class="row mb-2">
         <div class="col-12 px-3">
             <h5 class="float-start control-panel-heading">Kategorije</h5>
-            <a class="btn btn-sm btn-success float-end" href="{{ route('admin.categories.create') }}" role="button">
+            <a class="btn btn-sm btn-success float-end" href="#" data-toggle="modal" data-target="#modalCreate" role="button">
                 <i class="fa fa-plus" aria-hidden="true"></i>
             </a>
+            @include('admin.categories.modals.create')
         </div>
     </div>
 
@@ -19,6 +20,7 @@
             <thead>
                 <tr>
                 <th scope="col">ID</th>
+                <th scope="col">Ikona</th>
                 <th scope="col">Naziv</th>
                 <th scope="col">Opis</th>
                 <th scope="col" class="text-end">Operacije</th>
@@ -28,12 +30,14 @@
                 @foreach($categories as $category)
                 <tr>
                 <th scope="row">{{ $category->id }}</th>
+                <td><img style="max-width: 16px;" src="{{$category->icon}}"/></td>
                 <td>{{ $category->name }}</td>
                 <td>{{ $category->description }}</td>
                 <td class="text-end">
-                    <a class="btn btn-sm btn-primary" href="{{ route('admin.categories.edit', $category->id) }}" role="button">
+                    <a class="btn btn-sm btn-primary" href="#" data-toggle="modal" data-target="#modalEdit-{{$category->id}}" role="button">
                         <i class="fa fa-edit" aria-hidden="true"></i>
                     </a>
+                    @include('admin.categories.modals.edit')
                     <button type="button" class="btn btn-sm btn-danger" onclick="event.preventDefault();
                         document.getElementById('delete-category-form-{{ $category->id }}').submit()">
                         <i class="fa fa-trash-o" aria-hidden="true"></i>

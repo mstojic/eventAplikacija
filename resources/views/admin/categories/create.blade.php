@@ -12,7 +12,7 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
         <p class="form-heading">Kreiranje nove kategorije<p>
-        <form method="POST" action="{{ route('admin.categories.store') }}">
+        <form method="POST" action="{{ route('admin.categories.store') }}" enctype="multipart/form-data">
             @include('admin.categories.partials.form', ['create' => true])
         </form>
     </x-auth-card>

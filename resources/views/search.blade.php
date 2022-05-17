@@ -21,9 +21,9 @@
           <div class="naccs">
             <div class="grid">
               <div class="row">
-
+                @include('partials.alerts-relative')
                 <div class="col-lg-12">
-                  <ul class="nacc">
+                    <ul class="nacc">
                       <div>
                         @foreach($events as $event)
                         <div class="col-lg-12">
@@ -55,8 +55,8 @@
                                               </span>
                                               <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(70) }}</em></span>
                                               <span class="info">
-                                                  <img src="/assets/images/listing-icon-02.png" alt=""> 2 Sobe<br>
-                                                  <img src="/assets/images/listing-icon-03.png" alt=""> 3 Kupatila
+                                                <i class="fa fa-ticket icon-event"></i> Broj prijava: {{ $event->users->count()}}<br>
+                                                <i class="fa fa-clock-o icon-event"></i> Datum: {{ date('d.m.Y H:i', strtotime($event->date)) }}</span>
 
                                               </span><br>
 

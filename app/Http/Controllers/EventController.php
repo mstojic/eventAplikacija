@@ -129,7 +129,7 @@ class EventController extends Controller
 
             return view('listing',
             [
-                'events' => Event::all(),
+                'events' => Event::where('date', '>',  Carbon::now())->get(),
                 'categories' => Category::all(),
                 'category_link' => Category::find($id)
             ]);
@@ -170,6 +170,11 @@ class EventController extends Controller
         }
 
         $events=$events->get();
+
+        $request->session()->forget('warning');
+        if($events->isEmpty()){
+            $request->session()->flash('warning', 'Nema rezultata za vašu pretragu.');
+        }
 
         return view('search',
         [

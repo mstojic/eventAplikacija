@@ -8,9 +8,10 @@
     <div class="row mb-2">
         <div class="col-12 px-3">
             <h5 class="float-start control-panel-heading">Događaji</h5>
-            <a class="btn btn-sm btn-success float-end" href="{{ route('admin.events.create') }}" role="button">
+            <a class="btn btn-sm btn-success float-end"  href="#" data-toggle="modal" data-target="#modalCreate" role="button">
                 <i class="fa fa-plus" aria-hidden="true"></i>
             </a>
+            @include('admin.events.modals.create')
         </div>
     </div>
 
@@ -40,9 +41,10 @@
                 <td>{{ $event->organizer->name }}</td>
                 <td>{{ $event->location->name }}</td>
                 <td class="text-end">
-                    <a class="btn btn-sm btn-primary" href="{{ route('admin.events.edit', $event->id) }}" role="button">
+                    <a class="btn btn-sm btn-primary" href="#" data-toggle="modal" data-target="#modalEdit-{{$event->id}}" role="button">
                         <i class="fa fa-edit" aria-hidden="true"></i>
                     </a>
+                    @include('admin.events.modals.edit')
                     <button type="button" class="btn btn-sm btn-danger" onclick="event.preventDefault();
                         document.getElementById('delete-event-form-{{ $event->id }}').submit()">
                         <i class="fa fa-trash-o" aria-hidden="true"></i>

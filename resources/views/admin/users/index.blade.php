@@ -8,9 +8,10 @@
     <div class="row mb-2">
         <div class="col-12 px-3">
             <h5 class="float-start control-panel-heading">Korisnici</h5>
-            <a class="btn btn-sm btn-success float-end" href="{{ route('admin.users.create') }}" role="button">
+            <a class="btn btn-sm btn-success float-end" href="#" data-toggle="modal" data-target="#modalCreate" role="button">
                 <i class="fa fa-plus" aria-hidden="true"></i>
             </a>
+            @include('admin.users.modals.create')
         </div>
     </div>
 
@@ -31,9 +32,10 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td class="text-end">
-                    <a class="btn btn-sm btn-primary" href="{{ route('admin.users.edit', $user->id) }}" role="button">
+                    <a class="btn btn-sm btn-primary" href="#" data-toggle="modal" data-target="#modalEdit-{{$user->id}}" role="button">
                         <i class="fa fa-edit" aria-hidden="true"></i>
                     </a>
+                    @include('admin.users.modals.edit')
                     <button type="button" class="btn btn-sm btn-danger" onclick="event.preventDefault();
                         document.getElementById('delete-user-form-{{ $user->id }}').submit()">
                         <i class="fa fa-trash-o" aria-hidden="true"></i>

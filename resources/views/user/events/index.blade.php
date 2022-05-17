@@ -21,16 +21,23 @@
           <div class="naccs">
             <div class="grid">
               <div class="row">
-
+                @include('partials.alerts-relative')
                 <div class="col-lg-12">
                   <ul class="nacc">
                       <div>
-                        @foreach($user->events as $event)
-
                         <div class="col-lg-12">
                           <div class="owl-carousel owl-listing">
+                            <?php $counter = 1; ?>
+                            @if ($user->events->isEmpty())
+                                <div class="alert alert-info container" role="alert">
+                                    Nemate rezerviranih događaja.
+                                </div>
+                            @endif
+                            @foreach($user->events as $event)
+                                @if($counter == 1)
                                     <div class="item">
                                     <div class="row">
+                                @endif
                                         <div class="col-lg-12">
                                         <div class="listing-item">
                                             <div class="left-image">
@@ -55,9 +62,9 @@
                                             </span>
                                             <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(70) }}</em></span>
                                             <span class="info">
-                                                <img src="/assets/images/listing-icon-02.png" alt=""> Broj prijava: {{ $event->users->count()}}<br>
+                                                <i class="fa fa-ticket icon-event"></i> Broj prijava: {{ $event->users->count()}}<br>
+                                                <i class="fa fa-clock-o icon-event"></i> Datum: {{ date('d.m.Y H:i', strtotime($event->date)) }}</span>
                                                 <!-- <img src="/assets/images/listing-icon-03.png" alt=""> 3 Kupatila </span><br> -->
-
                                             </span><br>
 
                                             <form id="detach-event-form-{{ $event->id }}" action="{{ route('user.events.destroy', $event->id) }}" method="POST" style="display: none">
@@ -68,13 +75,20 @@
                                             </div>
                                         </div>
                                         </div>
-                                    </div>
-                                    </div>
 
+                                @if($counter % 3 == 0)
+                                    </div>
+                                    </div>
+                                    <?php $counter = 1; ?>
+                                @else
+                                    <?php $counter++; ?>
+                                @endif
+
+                            @endforeach
                           </div>
                         </div>
 
-                        @endforeach
+
                       </div>
                     </li>
                   </ul>
