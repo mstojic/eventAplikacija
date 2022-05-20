@@ -29,7 +29,7 @@
                 </div>
               </div>
               <div class="col-lg-6 align-self-center">
-                <form id="contact" action="" method="get">
+                <form id="contact" action="mailto:eventaplikacija@example.com" method="get">
                   <div class="row">
                     <div class="col-lg-6">
                       <fieldset>

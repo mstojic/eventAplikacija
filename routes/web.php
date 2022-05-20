@@ -5,6 +5,7 @@ use Admin\UserController;
 use Admin\AdminEventController;
 use Admin\AdminCategoryController;
 use Admin\AdminLocationController;
+use Admin\AdminRoleController;
 use Organizer\OrganizerEventController;
 use User\Profile;
 use User\ReservedEventController;
@@ -52,6 +53,7 @@ Route::prefix('admin')->middleware(['auth', 'auth.isAdmin', 'verified'])->name('
     Route::resource('/events', AdminEventController::class);
     Route::resource('/categories', AdminCategoryController::class);
     Route::resource('/locations', AdminLocationController::class);
+    Route::resource('/roles', AdminRoleController::class);
 });
 
 Route::get('/dashboard', function () {

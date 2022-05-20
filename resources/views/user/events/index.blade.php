@@ -33,7 +33,7 @@
                                     Nemate rezerviranih događaja.
                                 </div>
                             @endif
-                            @foreach($user->events as $event)
+                            @foreach($user->events->sortByDesc('date') as $event)
                                 @if($counter == 1)
                                     <div class="item">
                                     <div class="row">

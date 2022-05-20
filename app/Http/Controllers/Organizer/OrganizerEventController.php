@@ -25,7 +25,7 @@ class OrganizerEventController extends Controller
         if(Gate::allows('is-organizer')){
             return view('organizer.events.index',
             [
-                'events' => Event::all(),
+                'events' => Event::orderBy('created_at', 'DESC')->get(),
                 'categories' => Category::all()
             ]);
         }
