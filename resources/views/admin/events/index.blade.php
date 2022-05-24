@@ -1,21 +1,19 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="row">
+<div class="row m-0">
 @include('components.admin-side-nav')
 <div class="control-panel-container container col-lg-10">
 
-    <div class="row mb-2">
-        <div class="col-12 px-3">
-            <h5 class="float-start control-panel-heading">Događaji</h5>
-            <a class="btn btn-sm btn-success float-end"  href="#" data-toggle="modal" data-target="#modalCreate" role="button">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-            </a>
-            @include('admin.events.modals.create')
-        </div>
+    <div class="d-flex align-items-center pb-2 px-2">
+        <h5 class="float-start control-panel-heading">Događaji</h5>
+        <a class="btn btn-sm btn-success flex-end" href="#" data-toggle="modal" data-target="#modalCreate" role="button">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </a>
+        @include('admin.events.modals.create')
     </div>
 
-    <div class="">
+    <div>
         <table class="table">
             <thead>
                 <tr>
@@ -45,14 +43,14 @@
                         <i class="fa fa-edit" aria-hidden="true"></i>
                     </a>
                     @include('admin.events.modals.edit')
-                    <button type="button" class="btn btn-sm btn-danger" onclick="event.preventDefault();
-                        document.getElementById('delete-event-form-{{ $event->id }}').submit()">
+                    <button type="button" class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#modalDelete-{{$event->id}}" role="button">
                         <i class="fa fa-trash-o" aria-hidden="true"></i>
                     </button>
                     <form id="delete-event-form-{{ $event->id }}" action="{{ route('admin.events.destroy', $event->id) }}" method="POST" style="display: none">
                         @csrf
                         @method("DELETE")
                     </form>
+                    @include('admin.events.modals.delete')
                 </td>
                 </tr>
                 @endforeach

@@ -40,7 +40,7 @@
 		loop:true,
 		dots: true,
 		nav: false,
-		autoplay: true,
+		autoplay: false,
 		margin:30,
 		  responsive:{
 			  0:{

@@ -45,6 +45,23 @@
                                 name="password_confirmation" required />
             </div>
 
+            <!-- Organizer select -->
+            <div class="mt-4 d-flex">
+                <x-label :value="__('Želite li postati organizator?')" />
+
+                <div style="display: flex; margin-bottom: 30px">
+                <label class="customradio mt-2" style="width: 100%; padding-right: 15px;">
+                    <input  value="organizer" id="organizer" type="radio" name="organizer">
+                    <span class="radio"></span>
+                </label>
+
+                <label class="customradio-x mt-2" style="width: 100%; padding-left: 15px;">
+                    <input value="not-organizer" id="not-organizer" type="radio" name="organizer">
+                    <span class="radio-x"></span>
+                </label>
+                </div>
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Već ste registrirani?') }}

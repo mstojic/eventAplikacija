@@ -34,6 +34,10 @@
                                 </div>
                             @endif
                             @foreach($user->events->sortByDesc('date') as $event)
+                                <?php
+                                    $eventDate = strtotime($event->date);
+                                    $now = strtotime(date('d.m.Y H:i'));
+                                ?>
                                 @if($counter == 1)
                                     <div class="item">
                                     <div class="row">
@@ -46,9 +50,11 @@
                                                 <div class="main-white-button">
                                                 <a href="{{ route('details', $event->id) }}"><i class="fa fa-edit"></i> &nbsp;Pogledajte detalje&nbsp;&nbsp;</a>
                                                 </div>
+                                                @if($eventDate > $now)
                                                 <div class="main-white-button organizer-delete-button mt-5">
                                                     <a type="submit" onclick="event.preventDefault(); document.getElementById('detach-event-form-{{ $event->id }}').submit()"><i class="fa fa-trash"></i> Otkažite rezervaciju</a>
                                                 </div>
+                                                @endif
                                             </div>
                                             </div>
                                             <div class="right-content align-self-center">
@@ -63,7 +69,12 @@
                                             <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(70) }}</em></span>
                                             <span class="info">
                                                 <i class="fa fa-ticket icon-event"></i> Broj prijava: {{ $event->users->count()}}<br>
-                                                <i class="fa fa-clock-o icon-event"></i> Datum: {{ date('d.m.Y H:i', strtotime($event->date)) }}</span>
+                                                @if($eventDate > $now)
+                                                    <i class="fa fa-clock-o icon-event"></i> Datum:  {{ date('d.m.Y H:i', strtotime($event->date)) }}
+                                                @else
+                                                    <div class="event-end">Događaj završio</div>
+                                                @endif
+                                            </span>
                                                 <!-- <img src="/assets/images/listing-icon-03.png" alt=""> 3 Kupatila </span><br> -->
                                             </span><br>
 

@@ -603,8 +603,25 @@ header
 @media (max-width: 992px) {
   .header-area .main-nav .nav li.nav-button  ,
   .background-header .main-nav .nav li.nav-button {
-    display: none;
+    /*display: none;*/
+    padding: 0px !important;
   }
+
+  .header-area .main-nav .nav li.nav-button a,
+  .background-header .main-nav .nav li.nav-button a{
+    font-weight: 500 !important;
+    color: gray !important;
+  }
+
+  .background-header .main-nav .nav li.nav-button .main-button-link {
+      background: transparent;
+      color: gray !important;
+  }
+
+  .mobile-hide {
+      display: none !important;
+  }
+
   .header-area .main-nav .nav li:nth-child(6),
   .background-header .main-nav .nav li:nth-child(6) {
     padding-right: 0px;
@@ -612,6 +629,11 @@ header
 }
 
 @media (max-width: 767px) {
+   .dropdown-menu {
+       width: 100%;
+       text-align: center;
+   }
+
   .background-header .main-nav .nav {
     margin-top: 80px !important;
   }
@@ -677,7 +699,7 @@ header
     padding: 0px !important;
     border: none !important;
     background: #f7f7f7 !important;
-    color: #191a20 !important;
+    color: gray !important;
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
@@ -1723,6 +1745,7 @@ Listing Page
   border-bottom-left-radius: 7px;
   position: relative;
   z-index: 1;
+  max-width: 500px;
 }
 
 .listing-page .item .left-image .hover-content .main-white-button a i {
@@ -1752,6 +1775,8 @@ Listing Page
   overflow: hidden;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
+  min-height: 380px;
+  object-fit: cover;
 }
 
 .listing-page .item .right-content {
@@ -2093,7 +2118,11 @@ responsive
   .left-image {
       max-width: unset;
   }
+  .listing-page .item .left-image {
+    max-width: unset !important;
+  }
 }
+
 
 @media (max-width: 767px) {
   .main-banner ul.categories li a {
@@ -2119,7 +2148,7 @@ responsive
 .control-panel-container {
     position: relative;
     min-height: 626.8px;
-    padding: 10px 15px 10px 0px;
+    padding: 10px 0px;
     border-left: 0.5px solid gainsboro;
 }
 
@@ -2230,7 +2259,7 @@ responsive
     border: 1px solid #8d99af;
     outline: none;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     color: #8d99af;
     padding: 0px 15px;
     margin-bottom: 30px;
@@ -2298,6 +2327,17 @@ responsive
 
 .organizer-delete-button a i {
     background-color: #dc3545 !important;
+}
+
+.event-end {
+    margin-top: 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 5px;
+    padding: 0px 8px;
+    width: max-content;
 }
 
 .admin-nav li {
@@ -2407,3 +2447,26 @@ responsive
     outline: none;
     box-shadow: none;
   }
+
+  .modal-delete-text {
+      margin: 20px 0px 30px;
+      font-size: 18px;
+  }
+
+  .modal-delete-btn {
+      font-size: 14px;
+      text-transform: uppercase;
+  }
+
+  .admin-row {
+      max-width: 100%;
+  }
+
+  .flex-end {
+    align-self: flex-end;
+    margin-left: auto !important;
+  }
+
+  .customcheck {
+  position: relative;
+}

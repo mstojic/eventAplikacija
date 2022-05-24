@@ -1,18 +1,16 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="row">
+<div class="row m-0">
 @include('components.admin-side-nav')
 <div class="control-panel-container container col-lg-10">
 
-    <div class="row mb-2">
-        <div class="col-12 px-3">
-            <h5 class="float-start control-panel-heading">Lokacije</h5>
-            <a class="btn btn-sm btn-success float-end" href="#" data-toggle="modal" data-target="#modalCreate" role="button">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-            </a>
-            @include('admin.locations.modals.create')
-        </div>
+    <div class="d-flex align-items-center pb-2 px-2">
+        <h5 class="float-start control-panel-heading">Lokacije</h5>
+        <a class="btn btn-sm btn-success flex-end" href="#" data-toggle="modal" data-target="#modalCreate" role="button">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </a>
+        @include('admin.locations.modals.create')
     </div>
 
     <div>
@@ -34,14 +32,14 @@
                         <i class="fa fa-edit" aria-hidden="true"></i>
                     </a>
                     @include('admin.locations.modals.edit')
-                    <button type="button" class="btn btn-sm btn-danger" onclick="event.preventDefault();
-                        document.getElementById('delete-location-form-{{ $location->id }}').submit()">
+                    <button type="button" class="btn btn-sm btn-danger" href="#" data-toggle="modal" data-target="#modalDelete-{{$location->id}}" role="button">
                         <i class="fa fa-trash-o" aria-hidden="true"></i>
                     </button>
                     <form id="delete-location-form-{{ $location->id }}" action="{{ route('admin.locations.destroy', $location->id) }}" method="POST" style="display: none">
                         @csrf
                         @method("DELETE")
                     </form>
+                    @include('admin.locations.modals.delete')
                 </td>
                 </tr>
                 @endforeach
