@@ -1766,6 +1766,7 @@ Listing Page
   width: 100%;
   position: relative;
   margin-bottom: 30px;
+  max-height: 380px;
 }
 
 .listing-page .item .left-image {
@@ -2068,6 +2069,9 @@ responsive
   }
   .listing-page .naccs .menu {
     margin-bottom: 30px;
+  }
+  .listing-page .item .listing-item{
+    max-height: unset;
   }
   .popular-categories .nacc .thumb .left-text {
     margin: 30px;
