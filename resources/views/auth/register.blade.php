@@ -56,7 +56,7 @@
                 </label>
 
                 <label class="customradio-x mt-2" style="width: 100%; padding-left: 15px;">
-                    <input value="not-organizer" id="not-organizer" type="radio" name="organizer">
+                    <input value="not-organizer" id="not-organizer" type="radio" name="organizer" checked>
                     <span class="radio-x"></span>
                 </label>
                 </div>

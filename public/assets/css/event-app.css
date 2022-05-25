@@ -1,7 +1,5 @@
 /*
 
-TemplateMo 564 Plot Listing
-
 https://templatemo.com/tm-564-plot-listing
 
 */
@@ -173,13 +171,40 @@ body {
   }
 
   .details-recent-listing {
-      margin-top: 400px !important;
+      margin-top: 310px !important;
   }
+
+  .details-event-heading {
+      min-height: 100px !important;
+      max-height: 100px;
+
+  }
+
 }
 
 @media (max-width: 768px) {
+    .main-banner {
+        padding: 100px 0px 180px 0px !important;
+    }
+
     .details-recent-listing {
-        margin-top: 270px !important;
+        margin-top: 200px !important;
+    }
+
+    .details-event-heading {
+        line-height: 50px !important;
+        font-size:6vmin !important;
+    }
+
+    .details-main-button a,
+    .details-main-button-cancel a{
+        width: 100%;
+    }
+}
+
+@media (max-width: 432px) {
+    .details-recent-listing {
+        margin-top: 50px !important;
     }
 }
 
@@ -632,6 +657,11 @@ header
    .dropdown-menu {
        width: 100%;
        text-align: center;
+       background-color: #f7f7f7;
+   }
+
+   .dropdown-menu li {
+       background-color: #f7f7f7 !important;
    }
 
   .background-header .main-nav .nav {

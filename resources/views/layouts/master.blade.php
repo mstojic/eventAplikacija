@@ -22,7 +22,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/app.css') }}" >
   <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/fontawesome.css') }}" >
   <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/owl.css') }}" >
-  <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/templatemo-plot-listing.css') }}" >
+  <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/event-app.css') }}" >
 
 </head>
 

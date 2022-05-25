@@ -37,7 +37,7 @@
 
 	$('.owl-listing').owlCarousel({
 		items:1,
-		loop:true,
+		loop: false,
 		dots: true,
 		nav: false,
 		autoplay: false,
