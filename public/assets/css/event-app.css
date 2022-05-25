@@ -241,6 +241,7 @@ body {
   border-radius: 7px;
   letter-spacing: 0.25px;
   transition: all .3s;
+  white-space: nowrap;
 }
 
 .main-white-button a i {
