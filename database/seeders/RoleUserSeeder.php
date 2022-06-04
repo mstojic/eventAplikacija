@@ -31,9 +31,45 @@ class RoleUserSeeder extends Seeder
             ]
         ]);
 
+        DB::table('role_user')->insert([
+            [
+                'role_id' => '1',
+                'user_id' => '2'
+            ],
+            [
+                'role_id' => '2',
+                'user_id' => '2'
+            ],
+            [
+                'role_id' => '3',
+                'user_id' => '2'
+            ]
+        ]);
+
+        DB::table('role_user')->insert([
+            [
+                'role_id' => '1',
+                'user_id' => '3'
+            ],
+            [
+                'role_id' => '2',
+                'user_id' => '3'
+            ],
+            [
+                'role_id' => '3',
+                'user_id' => '3'
+            ]
+        ]);
+
         $roles = Role::all();
 
-        User::all()->each(function($user) use ($roles) {
+        $users = User::where([
+            ['id', '!=', '1'],
+            ['id', '!=', '2'],
+            ['id', '!=', '3']
+        ])->get();
+
+        $users->each(function($user) use ($roles) {
             $user->roles()->attach(
                 $roles->random(1)->pluck('id')
             );
