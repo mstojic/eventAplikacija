@@ -110,7 +110,7 @@
 
 <!-- Skripta za postavljanje minimalnog datuma. -->
 <script>
-    var today = new Date();
+ /*   var today = new Date();
     var dd = today.getDate();
     var mm = today.getMonth()+1; //Siječanj je jednak nuli, stoga dodajemo 1 kako bi postao prvi mjesec.
     var yyyy = today.getFullYear();
@@ -122,6 +122,6 @@
     }
 
     today = yyyy+'-'+mm+'-'+dd +"T00:00:00";
-    document.getElementById("date").setAttribute("min", today);
+    document.getElementById("date").setAttribute("min", today);*/
 </script>
 @stop
