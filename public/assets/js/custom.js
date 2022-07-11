@@ -37,10 +37,10 @@
 
 	$('.owl-listing').owlCarousel({
 		items:1,
-		loop:true,
+		loop: false,
 		dots: true,
 		nav: false,
-		autoplay: true,
+		autoplay: false,
 		margin:30,
 		  responsive:{
 			  0:{

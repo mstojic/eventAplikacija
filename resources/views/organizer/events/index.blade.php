@@ -38,6 +38,10 @@
                                 </div>
                             @endif
                             @foreach($events as $event)
+                            <?php
+                                    $eventDate = strtotime($event->date);
+                                    $now = strtotime(date('d.m.Y H:i'));
+                            ?>
                             @if ($event->organizer->id == auth()->user()->id)
 
                                 @if($counter == 1)
@@ -48,18 +52,21 @@
                                         <div class="col-lg-12">
                                         <div class="listing-item">
                                             <div class="left-image">
-                                            <a href="{{ route('organizer.events.edit', $event->id) }}"><img src="{{ $event->image }}" alt=""></a>
+                                            <a href="{{ route('details', $event->id) }}"><img src="{{ $event->image }}" alt=""></a>
                                             <div class="hover-content">
+
+                                                @if($eventDate > $now)
                                                 <div class="main-white-button">
-                                                <a href="{{ route('organizer.events.edit', $event->id) }}"><i class="fa fa-edit"></i> Uredite podatke&nbsp;&nbsp;</a>
+                                                    <a href="{{ route('organizer.events.edit', $event->id) }}"><i class="fa fa-edit"></i> Uredite podatke&nbsp;&nbsp;</a>
                                                 </div>
                                                 <div class="main-white-button organizer-delete-button mt-5">
-                                                    <a onclick="event.preventDefault(); document.getElementById('delete-event-form-{{ $event->id }}').submit()"><i class="fa fa-trash"></i> Uklonite događaj</a>
+                                                    <a type="submit" onclick="event.preventDefault(); document.getElementById('detach-event-form-{{ $event->id }}').submit()"><i class="fa fa-trash"></i> Obrišite događaj</a>
                                                 </div>
+                                                @endif
                                             </div>
                                             </div>
                                             <div class="right-content align-self-center">
-                                            <a href="{{ route('organizer.events.edit', $event->id) }}">
+                                            <a href="{{ route('details', $event->id) }}">
                                                 <h4>{{ Str::of($event->name)->limit(50) }}</h4>
                                             </a>
                                             <h6>Organizator: {{ $event->organizer->name }}</h6>
@@ -70,7 +77,12 @@
                                             <span class="details">Detalji: <em>{{ Str::of($event->description)->limit(70) }}</em></span>
                                             <span class="info">
                                                 <i class="fa fa-ticket icon-event"></i> Broj prijava: {{ $event->users->count()}}<br>
-                                                <i class="fa fa-clock-o icon-event"></i> Datum: {{ date('d.m.Y H:i', strtotime($event->date)) }}</span>
+                                                @if($eventDate > $now)
+                                                <i class="fa fa-clock-o icon-event"></i> Datum:  {{ date('d.m.Y H:i', strtotime($event->date)) }}
+                                                @else
+                                                    <div class="event-end">Događaj završio</div>
+                                                @endif
+                                            </span>
                                                 <!-- <img src="/assets/images/listing-icon-03.png" alt=""> 3 Kupatila </span><br> -->
 
                                             <form id="delete-event-form-{{ $event->id }}" action="{{ route('organizer.events.destroy', $event->id) }}" method="POST" style="display: none">

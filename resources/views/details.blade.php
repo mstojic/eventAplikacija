@@ -57,14 +57,20 @@
                      @can('is-user')
                      @if($event->organizer_id != $user->id)
                      @if($event->users->contains('id', $user->id))
-                      <div class="main-white-button details-main-button-cancel">
+                     <?php
+                        $eventDate = strtotime($event->date);
+                        $now = strtotime(date('d.m.Y H:i'));
+                     ?>
+                     @if($eventDate > $now)
+                     <div class="main-white-button details-main-button-cancel">
                         <a type="submit" onclick="event.preventDefault(); document.getElementById('detach-event-form-{{ $event->id }}').submit()"><i class="fa fa-trash"></i> Otkažite rezervaciju</a>
                       </div>
                       <form id="detach-event-form-{{ $event->id }}" action="{{ route('user.events.destroy', $event->id) }}" method="POST" style="display: none">
                         @csrf
                         @method("DELETE")
                       </form>
-                    @else
+                     @endif
+                     @else
                       <div class="main-white-button details-main-button">
                         <a type="submit" onclick="event.preventDefault(); document.getElementById('attach-event-form-{{ $event->id }}').submit()"><i class="fa fa-check"></i> Prijavite se na događaj</a>
                       </div>

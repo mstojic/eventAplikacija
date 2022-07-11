@@ -48,6 +48,10 @@ class RegisteredUserController extends Controller
 
         // Dodano -------
         $user->roles()->sync(Role::where('role_name', 'Korisnik')->first()->id);
+
+        if($request->organizer == 'organizer'){
+            $user->roles()->sync(Role::where('role_name', 'Organizator')->first()->id);
+        };
         //---------------
 
         event(new Registered($user));

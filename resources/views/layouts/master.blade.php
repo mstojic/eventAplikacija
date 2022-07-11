@@ -22,7 +22,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/app.css') }}" >
   <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/fontawesome.css') }}" >
   <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/owl.css') }}" >
-  <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/templatemo-plot-listing.css') }}" >
+  <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/event-app.css') }}" >
 
 </head>
 
@@ -56,7 +56,7 @@
               <li class="nav-button">
               <div class="dropdown main-white-button">
                 <a class="dropdown-toggle main-button-link" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-user" aria-hidden="true"></i>&nbsp;OPCIJE
+                    <i class="fa fa-user mobile-hide" aria-hidden="true"></i>&nbsp;OPCIJE
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 @can('is-admin')<li><a class="dropdown-item" href="/admin/users">Administracija</a></li>@endcan
@@ -69,7 +69,7 @@
               @endauth
               <li class="nav-button">
                 @guest
-                    <div class="main-white-button"><a class="main-button-link" href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> PRIJAVITE SE</a></div>
+                    <div class="main-white-button"><a class="main-button-link" href="/login"><i class="fa fa-sign-in mobile-hide" aria-hidden="true"></i> PRIJAVITE SE</a></div>
                 @endguest
                 @auth
                     <form method="POST" action="{{ route('logout') }}">
@@ -77,7 +77,7 @@
                         <div class="main-white-button">
                             <a class="main-button-link" href="route('logout')" onclick="event.preventDefault();
                                 this.closest('form').submit();">
-                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                <i class="fa fa-sign-out mobile-hide" aria-hidden="true"></i>
                                 ODJAVA
                             </a>
                         </div>
@@ -117,10 +117,10 @@
             <div class="row">
               <div class="col-lg-6 col-sm-12">
                 <ul>
-                  <li><a href="#">Kategorije</a></li>
+                  <li><a href="/category">Kategorije</a></li>
                   <li><a href="#">Dodajte svoj događaj</a></li>
-                  <li><a href="#">Događaji</a></li>
-                  <li><a href="#">Kontaktirajte nas</a></li>
+                  <li><a href="listing">Događaji</a></li>
+                  <li><a href="/contact">Kontaktirajte nas</a></li>
                 </ul>
               </div>
               <div class="col-lg-12">

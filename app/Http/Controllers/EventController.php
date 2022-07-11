@@ -129,7 +129,7 @@ class EventController extends Controller
 
             return view('listing',
             [
-                'events' => Event::where('date', '>',  Carbon::now())->get(),
+                'events' => Event::where('date', '>',  Carbon::now())->orderBy('created_at', 'DESC')->get(),
                 'categories' => Category::all(),
                 'category_link' => Category::find($id)
             ]);

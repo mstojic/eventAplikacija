@@ -1,7 +1,5 @@
 /*
 
-TemplateMo 564 Plot Listing
-
 https://templatemo.com/tm-564-plot-listing
 
 */
@@ -173,13 +171,40 @@ body {
   }
 
   .details-recent-listing {
-      margin-top: 400px !important;
+      margin-top: 310px !important;
   }
+
+  .details-event-heading {
+      min-height: 100px !important;
+      max-height: 100px;
+
+  }
+
 }
 
 @media (max-width: 768px) {
+    .main-banner {
+        padding: 100px 0px 180px 0px !important;
+    }
+
     .details-recent-listing {
-        margin-top: 270px !important;
+        margin-top: 200px !important;
+    }
+
+    .details-event-heading {
+        line-height: 50px !important;
+        font-size:6vmin !important;
+    }
+
+    .details-main-button a,
+    .details-main-button-cancel a{
+        width: 100%;
+    }
+}
+
+@media (max-width: 432px) {
+    .details-recent-listing {
+        margin-top: 50px !important;
     }
 }
 
@@ -216,6 +241,7 @@ body {
   border-radius: 7px;
   letter-spacing: 0.25px;
   transition: all .3s;
+  white-space: nowrap;
 }
 
 .main-white-button a i {
@@ -603,8 +629,25 @@ header
 @media (max-width: 992px) {
   .header-area .main-nav .nav li.nav-button  ,
   .background-header .main-nav .nav li.nav-button {
-    display: none;
+    /*display: none;*/
+    padding: 0px !important;
   }
+
+  .header-area .main-nav .nav li.nav-button a,
+  .background-header .main-nav .nav li.nav-button a{
+    font-weight: 500 !important;
+    color: gray !important;
+  }
+
+  .background-header .main-nav .nav li.nav-button .main-button-link {
+      background: transparent;
+      color: gray !important;
+  }
+
+  .mobile-hide {
+      display: none !important;
+  }
+
   .header-area .main-nav .nav li:nth-child(6),
   .background-header .main-nav .nav li:nth-child(6) {
     padding-right: 0px;
@@ -612,6 +655,16 @@ header
 }
 
 @media (max-width: 767px) {
+   .dropdown-menu {
+       width: 100%;
+       text-align: center;
+       background-color: #f7f7f7;
+   }
+
+   .dropdown-menu li {
+       background-color: #f7f7f7 !important;
+   }
+
   .background-header .main-nav .nav {
     margin-top: 80px !important;
   }
@@ -677,7 +730,7 @@ header
     padding: 0px !important;
     border: none !important;
     background: #f7f7f7 !important;
-    color: #191a20 !important;
+    color: gray !important;
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
@@ -1714,6 +1767,7 @@ Listing Page
   width: 100%;
   position: relative;
   margin-bottom: 30px;
+  max-height: 380px;
 }
 
 .listing-page .item .left-image {
@@ -1723,6 +1777,7 @@ Listing Page
   border-bottom-left-radius: 7px;
   position: relative;
   z-index: 1;
+  max-width: 500px;
 }
 
 .listing-page .item .left-image .hover-content .main-white-button a i {
@@ -1752,6 +1807,8 @@ Listing Page
   overflow: hidden;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
+  min-height: 380px;
+  object-fit: cover;
 }
 
 .listing-page .item .right-content {
@@ -2014,6 +2071,9 @@ responsive
   .listing-page .naccs .menu {
     margin-bottom: 30px;
   }
+  .listing-page .item .listing-item{
+    max-height: unset;
+  }
   .popular-categories .nacc .thumb .left-text {
     margin: 30px;
   }
@@ -2093,7 +2153,11 @@ responsive
   .left-image {
       max-width: unset;
   }
+  .listing-page .item .left-image {
+    max-width: unset !important;
+  }
 }
+
 
 @media (max-width: 767px) {
   .main-banner ul.categories li a {
@@ -2119,7 +2183,7 @@ responsive
 .control-panel-container {
     position: relative;
     min-height: 626.8px;
-    padding: 10px 15px 10px 0px;
+    padding: 10px 0px;
     border-left: 0.5px solid gainsboro;
 }
 
@@ -2230,7 +2294,7 @@ responsive
     border: 1px solid #8d99af;
     outline: none;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     color: #8d99af;
     padding: 0px 15px;
     margin-bottom: 30px;
@@ -2298,6 +2362,17 @@ responsive
 
 .organizer-delete-button a i {
     background-color: #dc3545 !important;
+}
+
+.event-end {
+    margin-top: 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 5px;
+    padding: 0px 8px;
+    width: max-content;
 }
 
 .admin-nav li {
@@ -2407,3 +2482,26 @@ responsive
     outline: none;
     box-shadow: none;
   }
+
+  .modal-delete-text {
+      margin: 20px 0px 30px;
+      font-size: 18px;
+  }
+
+  .modal-delete-btn {
+      font-size: 14px;
+      text-transform: uppercase;
+  }
+
+  .admin-row {
+      max-width: 100%;
+  }
+
+  .flex-end {
+    align-self: flex-end;
+    margin-left: auto !important;
+  }
+
+  .customcheck {
+  position: relative;
+}

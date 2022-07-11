@@ -1428,3 +1428,122 @@ select {
   text-align: center;
 }
 
+.customradio input {
+    display: none;
+  }
+
+  .customradio input~.radio {
+    background: gainsboro;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    height: 34px;
+    border-radius: 0.375rem;
+    vertical-align:middle;
+    margin-right:10px;
+  }
+
+  .customradio input~.radio:before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 24px;
+    background: #fff;
+    top: 15%;
+    left: 50%;
+  }
+
+  .customradio input~.radio:after {
+    transform: rotate(-45deg);
+    z-index: 1;
+  }
+
+  .customradio input~.radio:before {
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+
+  .customradio input:checked~.radio {
+    background: #3d8a00;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    height: 34px;
+    border-radius: 0.375rem;
+  }
+
+  .customradio input:checked~.radio:after {
+    display: none;
+  }
+  .customradio input~.radio:before,
+  .customradio input:checked~.radio:before {
+    background: none;
+    border: 2px solid #fff;
+    width: 9px;
+    top: 15%;
+    left: 50%;
+    border-top: 0;
+    border-left: 0;
+    height: 20px;
+  }
+
+
+/*----------------------------------------------------*/
+
+  .customradio-x input {
+    display: none;
+  }
+
+  .customradio-x input~.radio-x {
+    background: gainsboro;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    height: 34px;
+    border-radius: 0.375rem;
+    vertical-align:middle;
+    margin-right:10px;
+  }
+
+  .customradio-x input:checked~.radio-x:after,
+  .customradio-x input:checked~.radio-x:before,
+  .customradio-x input~.radio-x:after,
+  .customradio-x input~.radio-x:before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 24px;
+    background: #fff;
+    top: 15%;
+    left: 50%;
+  }
+
+  .customradio-x input:checked~.radio-x:after,
+  .customradio-x input~.radio-x:after {
+    transform: rotate(-45deg);
+    z-index: 1;
+  }
+
+  .customradio-x input:checked~.radio-x:before,
+  .customradio-x input~.radio-x:before {
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+
+  .customradio-x input:checked~.radio-x {
+    background: #ee0b0b;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    height: 34px;
+    border-radius: 0.375rem;
+  }
+
+
+

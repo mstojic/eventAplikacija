@@ -5,6 +5,7 @@
             <li><a href="/admin/events">Događaji</a></li>
             <li><a href="/admin/categories">Kategorije</a></li>
             <li><a href="/admin/locations">Lokacije</a></li>
+            <li><a href="/admin/roles">Uloge</a></li>
         </ul>
     </div>
 </div>
