@@ -62,11 +62,12 @@ class RoleUserSeeder extends Seeder
         ]);
 
         $roles = Role::all();
+
         $users = User::where([
-            ['id', '!=', 1],
-            ['id', '!=', 2],
-            ['id', '!=', 3]])
-            ->get();
+            ['id', '!=', '1'],
+            ['id', '!=', '2'],
+            ['id', '!=', '3']
+        ])->get();
 
         $users->each(function($user) use ($roles) {
             $user->roles()->attach(
