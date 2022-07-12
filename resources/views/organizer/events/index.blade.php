@@ -60,7 +60,7 @@
                                                     <a href="{{ route('organizer.events.edit', $event->id) }}"><i class="fa fa-edit"></i> Uredite podatke&nbsp;&nbsp;</a>
                                                 </div>
                                                 <div class="main-white-button organizer-delete-button mt-5">
-                                                    <a type="submit" onclick="event.preventDefault(); document.getElementById('detach-event-form-{{ $event->id }}').submit()"><i class="fa fa-trash"></i> Obrišite događaj</a>
+                                                    <a type="submit" onclick="event.preventDefault(); document.getElementById('delete-event-form-{{ $event->id }}').submit()"><i class="fa fa-trash"></i> Obrišite događaj</a>
                                                 </div>
                                                 @endif
                                             </div>
